@@ -1,7 +1,9 @@
+using System;
 using System.Drawing;
 
 namespace MageTwinstick
 {
+    //type of PowerUp
     enum PowerUpType
     {
         Freeze, HealthRegen, ManaRegen
@@ -12,10 +14,26 @@ namespace MageTwinstick
             : base(imagePath, startPos, display, animationSpeed)
         {
         }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        //removes itself at Collision with player
+        public override void OnCollision(GameObject other)
+        {
+            if(other is Player)
+            {
+                GameWorld.ObjectsToRemove.Add(this);
+            }
+=======
+>>>>>>> PowerUpOnCollision
 
         public override void OnCollision(GameObject other)
         {
             throw new System.NotImplementedException();
+<<<<<<< HEAD
+=======
+>>>>>>> refs/remotes/origin/master
+>>>>>>> PowerUpOnCollision
         }
     }
 }
