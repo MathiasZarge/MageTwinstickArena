@@ -3,6 +3,6 @@
 
     class MovingObject : GameObject
     {
-         
+        protected float speed;
     }
 }
