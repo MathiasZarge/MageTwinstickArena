@@ -17,9 +17,9 @@ namespace MageTwinstick
         //Properties
         //Auto properties for the given values
         public static ISoundEngine SoundEngine { get; } = new ISoundEngine();
-        public List<GameObject> Objects { get; set; }
-        public List<GameObject> ObjectsToRemove { get; set; }
-        public List<GameObject> ObjectsToAdd { get; set; }
+        public static List<GameObject> Objects { get; set; }
+        public static List<GameObject> ObjectsToRemove { get; set; }
+        public static List<GameObject> ObjectsToAdd { get; set; }
 
         //Constructer
         public GameWorld(Graphics dc, Rectangle display) //takes graphics and display as arguments
