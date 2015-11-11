@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Drawing;
 using System.Runtime.InteropServices;
 
@@ -44,12 +45,13 @@ namespace MageTwinstick
         //Methods
         public virtual void Draw(Graphics dc)
         {
-
+            //Draws the sprite
+            dc.DrawImage(sprite, Position.X, Position.Y);
         }
 
         public virtual void Update(float fps)
         {
-            
+            CheckCollision();
         }
 
         public virtual void UpdateAnimation(float fps)
