@@ -12,5 +12,10 @@ namespace MageTwinstick
             : base(imagePath, startPos, display, animationSpeed)
         {
         }
+
+        public override void OnCollision(GameObject other)
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }
