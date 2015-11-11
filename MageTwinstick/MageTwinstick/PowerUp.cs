@@ -14,6 +14,7 @@ namespace MageTwinstick
             : base(imagePath, startPos, display, animationSpeed)
         {
         }
+<<<<<<< HEAD
         //removes itself at Collision with player
         public override void OnCollision(GameObject other)
         {
@@ -21,6 +22,12 @@ namespace MageTwinstick
             {
                 GameWorld.ObjectsToRemove.Add(this);
             }
+=======
+
+        public override void OnCollision(GameObject other)
+        {
+            throw new System.NotImplementedException();
+>>>>>>> refs/remotes/origin/master
         }
     }
 }
