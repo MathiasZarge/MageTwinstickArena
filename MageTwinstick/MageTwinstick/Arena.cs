@@ -2,9 +2,9 @@ using System.Drawing;
 
 namespace MageTwinstick
 {
-    class ManaRegen : PowerUp
+    class Arena : GameObject
     {
-        public ManaRegen(string imagePath, Vector2D startPos, Rectangle display, float animationSpeed)
+        public Arena(string imagePath, Vector2D startPos, Rectangle display, float animationSpeed) 
             : base(imagePath, startPos, display, animationSpeed)
         {
         }
