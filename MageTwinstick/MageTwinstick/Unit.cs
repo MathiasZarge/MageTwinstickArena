@@ -2,19 +2,24 @@
 
 namespace MageTwinstick
 {
-    class Unit : MovingObject
+    abstract class Unit : MovingObject
     {
-        protected int health;
-        //Properties for Health 
-        public int Health { get; set; }
+        private int _health;
 
-        public Unit(string imagePath, Vector2D startPos, Rectangle display, float animationSpeed)
-            : base(imagePath, startPos, display, animationSpeed)
+        protected int health
         {
+            get { return _health; }
+            set { _health = value; }
         }
-        public virtual void Attack()
-        {
 
+        protected Unit(float speed,int health, string imagePath, Vector2D startPos, Rectangle display, float animationSpeed)
+
+      
+            : base(speed, imagePath, startPos, display, animationSpeed)
+        {
+            _health = health;
         }
+
+       public abstract void Attack();
     }
 }

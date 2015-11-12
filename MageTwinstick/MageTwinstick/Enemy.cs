@@ -5,15 +5,20 @@ namespace MageTwinstick
     class Enemy : Unit
     {
 
+
         public float attackTimer;
         public float coolDown;
         private Player player;
-        public Enemy(int health, float speed, string imagePath, Vector2D startPos, Rectangle display, float animationSpeed)
-            : base(imagePath, startPos, display, animationSpeed)
-        {
-        }
+       
 
         //Methods to be used in attack  
+        public Enemy(float speed, int health, string imagePath, Vector2D startPos, Rectangle display, float animationSpeed, float attackTimer, float coolDown, Player player) : base(speed, health, imagePath, startPos, display, animationSpeed)
+        {
+            this.attackTimer = attackTimer;
+            this.coolDown = coolDown;
+            this.player = player;
+        }
+
         void start()
         {
             attackTimer = 0;
@@ -47,13 +52,16 @@ namespace MageTwinstick
         {
             if (other is PlayerProjectile)
             {
-                Health -= 25;
+                health -= 25;
             }
             if (other is Player)
             {
                 Attack();
             }
-        }
+
+      
+
+      
     }
 
 }
