@@ -29,7 +29,7 @@ namespace MageTwinstick
         {
             return (float)Math.Sqrt((this.X * this.X) + (this.Y * this.Y));
         }
-
+    
         //Normalizes the vector.
         public void Normalize()
         {
