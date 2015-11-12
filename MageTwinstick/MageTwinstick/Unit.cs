@@ -7,16 +7,19 @@ namespace MageTwinstick
         private int _health;
 
         protected int health
+
         {
             get { return _health; }
             set { _health = value; }
         }
 
+     
         public Unit(float speed,int health, string imagePath, Vector2D startPos, Rectangle display, float animationSpeed)
             : base(speed, imagePath, startPos, display, animationSpeed)
         {
             _health = health;
         }
+
 
        public abstract void Attack();
     }
