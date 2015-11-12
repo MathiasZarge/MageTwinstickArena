@@ -4,6 +4,7 @@ namespace MageTwinstick
 {
     internal class Enemy : Unit
     {
+<<<<<<< HEAD
 
 
         public float attackTimer;
@@ -40,6 +41,9 @@ namespace MageTwinstick
 
         //Attack command and prevents the enemy from constantly ticking damage on the player
         public override void Attack()
+=======
+        public Enemy(float speed, int health, string imagePath, Vector2D startPos, Rectangle display, float animationSpeed) : base(speed, health, imagePath, startPos, display, animationSpeed)
+>>>>>>> refs/remotes/origin/master
         {
             if (attackTimer < 0)
                 attackTimer = 0;
@@ -50,6 +54,7 @@ namespace MageTwinstick
             }
         }
 
+<<<<<<< HEAD
         //Enemy collison and its response to different objects.
         public override void OnCollision(GameObject other)
         {
@@ -67,5 +72,11 @@ namespace MageTwinstick
 
         }
 
+=======
+        public override void Attack()
+        {
+            throw new System.NotImplementedException();
+        }
+>>>>>>> refs/remotes/origin/master
     }
 }
