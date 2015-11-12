@@ -32,6 +32,7 @@ namespace MageTwinstick
         public void SetupWorld() // Setup the world before we begin the game loop
         {
             Objects.Add(new Arena(@"Images\Background.png",new Vector2D(0,0), display, 1));
+            Objects.Add(new Player(150, 100, @"Images\Player\Idle\0.png", new Vector2D(300,600), display, 10));
             endTime = DateTime.Now;
         }
 
