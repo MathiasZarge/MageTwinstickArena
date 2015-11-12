@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
-using IrrKlang;
 
 namespace MageTwinstick
 {
@@ -16,7 +15,6 @@ namespace MageTwinstick
 
         //Properties
         //Auto properties for the given values
-        public static ISoundEngine SoundEngine { get; } = new ISoundEngine();
         public static List<GameObject> Objects { get; set; }
         public static List<GameObject> ObjectsToRemove { get; set; }
         public static List<GameObject> ObjectsToAdd { get; set; }
