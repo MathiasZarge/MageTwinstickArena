@@ -3,13 +3,14 @@
 namespace MageTwinstick
 {
 
-    class MovingObject : GameObject
+    abstract class MovingObject : GameObject
     {
         protected float speed;
 
-        public MovingObject(string imagePath, Vector2D startPos, Rectangle display, float animationSpeed) 
+        public MovingObject(float speed, string imagePath, Vector2D startPos, Rectangle display, float animationSpeed) 
             : base(imagePath, startPos, display, animationSpeed)
         {
+            this.speed = speed;
         }
 
         public override void OnCollision(GameObject other)
