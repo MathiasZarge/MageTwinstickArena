@@ -10,12 +10,12 @@ namespace MageTwinstick
         public float Y { get; set; }
 
         //Creates a vector from two floats representing x and y.
-        public Vector2D (float x, float y)
+        public Vector2D(float x, float y)
         {
             X = x;
             Y = y;
         }
-    
+
         //Finds the difference between one position and another by creating a vector between them.
         public Vector2D Subtract(Vector2D vec)
         {
