@@ -4,8 +4,7 @@ namespace MageTwinstick
 {
     class Projectile : MovingObject
     {
-        public Projectile(string imagePath, Vector2D startPos, Rectangle display, float animationSpeed)
-            : base(imagePath, startPos, display, animationSpeed)
+        public Projectile(float speed, string imagePath, Vector2D startPos, Rectangle display, float animationSpeed) : base(speed, imagePath, startPos, display, animationSpeed)
         {
         }
     }

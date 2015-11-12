@@ -58,6 +58,7 @@
     <Compile Include="GameObject.cs" />
     <Compile Include="GameWorld.cs" />
     <Compile Include="HealthRegen.cs" />
+    <Compile Include="Keyboard.cs" />
     <Compile Include="ManaRegen.cs" />
     <Compile Include="MovingObject.cs" />
     <Compile Include="Player.cs" />
