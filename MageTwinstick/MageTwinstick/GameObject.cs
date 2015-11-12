@@ -46,7 +46,7 @@ namespace MageTwinstick
         public virtual void Draw(Graphics dc)
         {
             //Draws the sprite
-            dc.DrawImage(sprite, Position.X, Position.Y);
+            dc.DrawImage(sprite, Position.X, Position.Y, sprite.Width, sprite.Height);
         }
 
         public virtual void Update(float fps)
