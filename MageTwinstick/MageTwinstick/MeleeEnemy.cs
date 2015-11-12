@@ -4,8 +4,7 @@ namespace MageTwinstick
 {
     class MeleeEnemy : Enemy
     {
-        public MeleeEnemy(string imagePath, Vector2D startPos, Rectangle display, float animationSpeed)
-            : base(imagePath, startPos, display, animationSpeed)
+        public MeleeEnemy(float speed, int health, string imagePath, Vector2D startPos, Rectangle display, float animationSpeed) : base(speed, health, imagePath, startPos, display, animationSpeed)
         {
         }
     }
