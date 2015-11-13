@@ -31,6 +31,12 @@ namespace MageTwinstick
         //Methods
         public void SetupWorld() // Setup the world before we begin the game loop
         {
+            Player player = new Player(150, 100, @"Images\Player\Idle\0.png", new Vector2D(display.Width / 2f, display.Height / 2f), display, 10);
+            Enemy gargant = new Enemy(10, 200, @"Images\Gargant\Move\0.png;1.png; Images\Gargant\Move\2.png; Images\Gargant\Move\3.png; Images\Gargant\Move\4.png; Images\Gargant\Move\5.png; Images\Gargant\Move\6.png; Images\Gargant\Move\7.png", new Vector2D(0,0), display, 1, 0, 2.0f, player);
+            Enemy crawler = new Enemy(20, 75, @"Images\Crawler\Move\0.png; Images\Crawler\Move\1.png; Images\Crawler\Move\2.png; Images\Crawler\Move\3.png; Images\Crawler\Move\4.png; Images\Crawler\Move\5.png; Images\Crawler\Move\6.png; Images\Crawler\Move\7.png", new Vector2D(0, 0), display, 1, 0, 2.0f, player);
+            Enemy demon = new Enemy(15, 125, @"Images\Demon\Move\0.png; Images\Demon\Move\1.png; Images\Demon\Move\2.png; Images\Demon\Move\3.png; Images\Demon\Move\4.png; Images\Demon\Move\5.png; Images\Demon\Move\6.png; Images\Demon\Move\7.png", new Vector2D(0, 0), display, 1, 0, 2.0f, player);
+            Enemy scorpion = new Enemy(30, 50, @"Images\Scorpion\Move\0.png; Images\Scorpion\Move\1.png; Images\Scorpion\Move\2.png; Images\Scorpion\Move\3.png; Images\Scorpion\Move\4.png; Images\Scorpion\Move\5.png; Images\Scorpion\Move\6.png; Images\Scorpion\Move\7.png", new Vector2D(0, 0), display,1, 0, 2.0f, player);
+
             Objects.Add(new Arena(@"Images\Background.png",new Vector2D(0,0), display, 1));
             Objects.Add(new Player(150, 100, @"Images\Player\Idle\0.png", new Vector2D(display.Width/2f, display.Height/2f), display, 10));
             endTime = DateTime.Now;
