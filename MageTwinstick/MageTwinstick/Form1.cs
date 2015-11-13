@@ -41,5 +41,17 @@ namespace MageTwinstick
             Mouse.X = e.X;
             Mouse.Y = e.Y;
         }
+
+        private void Form1_MouseDown(object sender, MouseEventArgs e)
+        {
+            foreach (GameObject go in GameWorld.Objects)
+            {
+                if (go is Player)
+                {
+                    Player p = go as Player;
+                    p.Attack();
+                }
+            }
+        }
     }
 }
