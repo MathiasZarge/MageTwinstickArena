@@ -34,8 +34,8 @@ namespace MageTwinstick
             Vector2D velocity = this.Position.Subtract(player.Position);
             velocity.Normalize();
 
-            Position.X += (1 / fps) * speed;
-            Position.Y += (1 / fps) * speed;
+            Position.X += (1 / fps) * (velocity.X*speed);
+            Position.Y += (1 / fps) * (velocity.Y*speed);
             base.Update(1 / fps);
         }
 
