@@ -22,12 +22,6 @@ namespace MageTwinstick
             this.player = player;
         }
        
-        private void start()
-        {
-            attackTimer = 0;
-            coolDown = 2.0f;
-        }
-
         //Make the enemy chase after the player no matter the players position.
         public override void Update(float fps)
         {
@@ -47,7 +41,7 @@ namespace MageTwinstick
                 attackTimer = 0;
             if (attackTimer == 0)
             {
-                Attack();
+                player.Health -= 10;
                 attackTimer = coolDown;
             }
         }
@@ -63,12 +57,6 @@ namespace MageTwinstick
             {
                 Attack();
             }
-
-
-
-
         }
-
-
     }
 }

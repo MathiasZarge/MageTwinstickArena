@@ -66,7 +66,7 @@ namespace MageTwinstick
 
         public override void Attack()
         {
-            GameWorld.ObjectsToAdd.Add(new Projectile(angle ,10, @"Images\Player\Spell.png", new Vector2D(Position.X, Position.Y), display, 1));
+            GameWorld.ObjectsToAdd.Add(new Projectile(200, @"Images\Player\Spell.png", new Vector2D(Position.X, Position.Y), display, 1));
         }
     }
 }
