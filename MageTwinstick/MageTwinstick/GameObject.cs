@@ -14,7 +14,7 @@ namespace MageTwinstick
         protected float currentFrameIndex;
         protected float animationSpeed;
         private RectangleF collisionBox;
-
+        
         //Properteis
         //Auto properties for the values
         public Vector2D Position { get; set; }

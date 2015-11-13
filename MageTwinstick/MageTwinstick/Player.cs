@@ -1,4 +1,6 @@
-﻿using System.Drawing;
+﻿using System;
+using System.Drawing;
+using System.Security.Cryptography.X509Certificates;
 using System.Windows.Forms;
 using RandGame;
 
@@ -11,6 +13,7 @@ namespace MageTwinstick
         {
         }
 
+        // move the character in the direction of the keys
         public override void Update(float fps)
         {
             if (Keyboard.IsKeyDown(Keys.W))
@@ -33,9 +36,31 @@ namespace MageTwinstick
             base.Update(fps);
         }
 
+        public override void Draw(Graphics dc)
+        {
+            //make a vector with origin in the center of the sprite
+            Vector2D playerCenter = new Vector2D(Position.X + sprite.Width/2, Position.Y + sprite.Height/2);
+            //subtract that vector with the mouse position
+            Vector2D vec = playerCenter.Subtract(new Vector2D(Mouse.X, Mouse.Y));
+            //normalize that vector
+            vec.Normalize();
+
+            //calulate the angle form the normalized vector
+            angle = Math.Atan2(vec.Y, vec.X)*180/Math.PI;
+
+            //Change the origin on the coordinate system to the center of the sprite
+            dc.TranslateTransform(Position.X + sprite.Width / 2f, Position.Y + sprite.Height / 2f);
+            //Rotate the coordinate system the desired degrees
+            dc.RotateTransform((float)angle + 90);
+            //Draw the sprite
+            dc.DrawImage(sprite, 0 - sprite.Width/2, 0 - sprite.Height/2, sprite.Width, sprite.Height);
+            //Reset the graphics
+            dc.ResetTransform();
+        }
+
         public override void Attack()
         {
-            throw new System.NotImplementedException();
+            
         }
     }
 }
