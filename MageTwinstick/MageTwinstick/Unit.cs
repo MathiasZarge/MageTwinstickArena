@@ -4,7 +4,7 @@ namespace MageTwinstick
 {
     abstract class Unit : MovingObject
     {
-        public int Health { get; set; }
+        public double Health { get; set; }
 
      
         public Unit(float speed,int health, string imagePath, Vector2D startPos, Rectangle display, float animationSpeed)
