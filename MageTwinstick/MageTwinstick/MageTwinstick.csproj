@@ -60,6 +60,7 @@
     <Compile Include="HealthRegen.cs" />
     <Compile Include="Keyboard.cs" />
     <Compile Include="ManaRegen.cs" />
+    <Compile Include="Mouse.cs" />
     <Compile Include="MovingObject.cs" />
     <Compile Include="Player.cs" />
     <Compile Include="PlayerProjectile.cs" />

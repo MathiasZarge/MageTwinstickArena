@@ -35,5 +35,11 @@ namespace MageTwinstick
             gameWorld = new GameWorld(dc, this.DisplayRectangle);
             gameWorld.SetupWorld();
         }
+
+        private void Form1_MouseMove(object sender, MouseEventArgs e)
+        {
+            Mouse.X = e.X;
+            Mouse.Y = e.Y;
+        }
     }
 }

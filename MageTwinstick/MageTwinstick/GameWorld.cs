@@ -32,7 +32,7 @@ namespace MageTwinstick
         public void SetupWorld() // Setup the world before we begin the game loop
         {
             Objects.Add(new Arena(@"Images\Background.png",new Vector2D(0,0), display, 1));
-            Objects.Add(new Player(150, 100, @"Images\Player\Idle\0.png", new Vector2D(300,600), display, 10));
+            Objects.Add(new Player(150, 100, @"Images\Player\Idle\0.png", new Vector2D(display.Width/2f, display.Height/2f), display, 10));
             endTime = DateTime.Now;
         }
 
@@ -65,7 +65,7 @@ namespace MageTwinstick
 
 #if DEBUG
             Font f = new Font("Arial", 16);
-            dc.DrawString(Convert.ToString(currentFps), f, Brushes.Black,10,10);
+            dc.DrawString(string.Format("{0}, {1}, {2}",Convert.ToString(currentFps), Mouse.X, Mouse.Y), f, Brushes.Black,10,10);
 #endif
 
             backBuffer.Render();
