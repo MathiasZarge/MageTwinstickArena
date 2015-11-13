@@ -24,16 +24,12 @@ namespace MageTwinstick
         {
             this.display = display;
             this.backBuffer = BufferedGraphicsManager.Current.Allocate(dc, display);
-
             this.dc = backBuffer.Graphics;
         }
 
         //Methods
         public void SetupWorld() // Setup the world before we begin the game loop
         {
-
-
-
             Player player = new Player(150, 100, @"Images\Player\Idle\0.png", new Vector2D(display.Width / 2f, display.Height / 2f), display, 10);
             Enemy gargant = new Enemy(30, 200, @"Images\Gargant\Move\0.png;Images\Gargant\Move\1.png;Images\Gargant\Move\2.png;Images\Gargant\Move\3.png;Images\Gargant\Move\4.png;Images\Gargant\Move\5.png;Images\Gargant\Move\6.png;Images\Gargant\Move\7.png", new Vector2D(0, 0), display, 20, 0, 2.0f, player);
             Enemy crawler = new Enemy(50, 75, @"Images\Crawler\Move\0.png;Images\Crawler\Move\1.png;Images\Crawler\Move\2.png;Images\Crawler\Move\3.png;Images\Crawler\Move\4.png;Images\Crawler\Move\5.png;Images\Crawler\Move\6.png;Images\Crawler\Move\7.png", new Vector2D(300, 0), display, 20, 0, 2.0f, player);
