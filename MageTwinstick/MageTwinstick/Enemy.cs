@@ -61,7 +61,9 @@ namespace MageTwinstick
 
         {
             if (attackTimer < 0)
+            {
                 attackTimer = 0;
+            }
             if (attackTimer == 0)
             {
                 player.Health -= 10;
