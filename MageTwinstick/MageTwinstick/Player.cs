@@ -32,8 +32,14 @@ namespace MageTwinstick
             {
                 Position.X += 1/fps*speed;
             }
+            
 
             base.Update(fps);
+        }
+
+        public override void OnCollision(GameObject other)
+        {
+            
         }
 
         public override void Draw(Graphics dc)
@@ -60,7 +66,7 @@ namespace MageTwinstick
 
         public override void Attack()
         {
-            
+            GameWorld.ObjectsToAdd.Add(new Projectile(angle ,10, @"Images\Player\Spell.png", new Vector2D(Position.X, Position.Y), display, 1));
         }
     }
 }

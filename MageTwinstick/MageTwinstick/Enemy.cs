@@ -55,9 +55,9 @@ namespace MageTwinstick
         //Enemy collison and its response to different objects.
         public override void OnCollision(GameObject other)
         {
-            if (other is PlayerProjectile)
+            if (other is Projectile)
             {
-                health -= 25;
+                Health -= 25;
             }
             if (other is Player)
             {
