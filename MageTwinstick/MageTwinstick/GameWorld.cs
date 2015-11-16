@@ -32,8 +32,17 @@ namespace MageTwinstick
         //Methods
         public void SetupWorld() // Setup the world before we begin the game loop
         {
+<<<<<<< HEAD
+            Player player = new Player(200, 100, @"Images\Player\Idle\0.png", new Vector2D(display.Width / 2f, display.Height / 2f), display, 10);
+            Enemy gargant = new Enemy(100, 200, @"Images\Gargant\Move\0.png;Images\Gargant\Move\1.png;Images\Gargant\Move\2.png;Images\Gargant\Move\3.png;Images\Gargant\Move\4.png;Images\Gargant\Move\5.png;Images\Gargant\Move\6.png;Images\Gargant\Move\7.png", new Vector2D(0, 0), display, 10, 0, 2.0f, player);
+            Enemy crawler = new Enemy(150, 75, @"Images\Crawler\Move\0.png;Images\Crawler\Move\1.png;Images\Crawler\Move\2.png;Images\Crawler\Move\3.png;Images\Crawler\Move\4.png;Images\Crawler\Move\5.png;Images\Crawler\Move\6.png;Images\Crawler\Move\7.png", new Vector2D(300, 0), display, 15, 0, 2.0f, player);
+            Enemy demon = new Enemy(100, 125, @"Images\Demon\Move\0.png;Images\Demon\Move\1.png;Images\Demon\Move\2.png;Images\Demon\Move\3.png;Images\Demon\Move\4.png;Images\Demon\Move\5.png;Images\Demon\Move\6.png;Images\Demon\Move\7.png", new Vector2D(600, 0), display, 10, 0, 2.0f, player);
+            Enemy scorpion = new Enemy(190, 50, @"Images\Scorpion\Move\0.png;Images\Scorpion\Move\1.png;Images\Scorpion\Move\2.png;Images\Scorpion\Move\3.png", new Vector2D(900, 0), display, 20, 0, 2.0f, player);
+
+=======
             Player player = new Player(150, 100, @"Images\Player\Idle\0.png", new Vector2D(display.Width / 2f, display.Height / 2f), display, 10);
             
+>>>>>>> refs/remotes/origin/master
             Objects.Add(new Arena(@"Images\Background.png", new Vector2D(0, 0), display, 1));
             Objects.Add(player);
 
@@ -89,7 +98,7 @@ namespace MageTwinstick
             Font f = new Font("Arial", 16);
             Player pl = (Player)Objects.Find(x => x is Player);
             double percentage = (300f/100f)*pl.Health;
-            dc.FillRectangle(Brushes.Green, new Rectangle(10, 10, Convert.ToInt32(percentage), 50));
+            dc.FillRectangle(Brushes.Red, new Rectangle(10, 10, Convert.ToInt32(percentage), 50));
             dc.DrawRectangle(p, new Rectangle(10, 10, 300, 50));
             percentage = (300f/100f)*pl.Mana;
             dc.FillRectangle(Brushes.Blue, new Rectangle(display.Right - 310, 10, Convert.ToInt32(percentage), 50));
