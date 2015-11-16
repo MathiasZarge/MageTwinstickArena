@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.Drawing.Drawing2D;
 
 namespace MageTwinstick
 {
@@ -89,13 +90,16 @@ namespace MageTwinstick
 
 
             Pen p = new Pen(Color.Black, 5);
-            dc.DrawRectangle(p, new Rectangle(10, 10, 300, 50));
-            Player pl = (Player)Objects.Find(x => x is Player);
-
-            
-            
-#if DEBUG
             Font f = new Font("Arial", 16);
+            Player pl = (Player)Objects.Find(x => x is Player);
+            double percentage = (300f/100f)*pl.Health;
+            dc.FillRectangle(Brushes.Green, new Rectangle(10, 10, Convert.ToInt32(percentage), 50));
+            dc.DrawRectangle(p, new Rectangle(10, 10, 300, 50));
+            percentage = (300f/100f)*pl.Mana;
+            dc.FillRectangle(Brushes.Blue, new Rectangle(display.Right - 310, 10, Convert.ToInt32(percentage), 50));
+            dc.DrawRectangle(p, new Rectangle(display.Right - 310, 10, 300, 50));
+
+#if DEBUG
             dc.DrawString(string.Format("{0}, {1}, {2}", Convert.ToString(currentFps), Mouse.X, Mouse.Y), f, Brushes.Black, 10, 100);
 #endif
 

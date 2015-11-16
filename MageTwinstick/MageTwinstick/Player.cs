@@ -8,9 +8,12 @@ namespace MageTwinstick
 {
     class Player : Unit
     {
-
+        //Properties
+        public double Mana { get; set; }
+       
         public Player(float speed, int health, string imagePath, Vector2D startPos, Rectangle display, float animationSpeed) : base(speed, health, imagePath, startPos, display, animationSpeed)
         {
+            Mana = 100;
         }
 
         // move the character in the direction of the keys
@@ -31,6 +34,11 @@ namespace MageTwinstick
             if (Keyboard.IsKeyDown(Keys.D))
             {
                 Position.X += 1 / fps * speed;
+            }
+
+            if (Mana < 100)
+            {
+                Mana += 1/fps*10f;
             }
 
             base.Update(fps);
@@ -65,7 +73,20 @@ namespace MageTwinstick
 
         public override void Attack()
         {
-            GameWorld.ObjectsToAdd.Add(new Projectile(700, @"Images\Player\Spell.png", new Vector2D(Position.X, Position.Y), display, 1));
+            if (Mana >= 5)
+            {
+                //make a vector with origin in the center of the sprite
+                Vector2D playerCenter = new Vector2D(Position.X + sprite.Width/2, Position.Y + sprite.Height/2);
+                //subtract that vector with the mouse position
+                Vector2D vec = playerCenter.Subtract(new Vector2D(Mouse.X, Mouse.Y));
+                //normalize that vector
+                vec.Normalize();
+
+                //place the projectile in front of the player
+                GameWorld.ObjectsToAdd.Add(new Projectile(700, @"Images\Player\Spell.png",
+                    new Vector2D(Position.X + vec.X*25, Position.Y + vec.Y*25), display, 1));
+                Mana -= 5;
+            }
         }
     }
 }
