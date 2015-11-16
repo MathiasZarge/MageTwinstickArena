@@ -33,6 +33,11 @@ namespace MageTwinstick
             Position.Y += (1 / fps) * (velocity.Y*speed);
             if (attackTimer > 0)
                 attackTimer -= 0.1f;
+
+            if (Health <= 0)
+            {
+                GameWorld.ObjectsToRemove.Add(this);
+            }
             base.Update(1 / fps);
         }
 
