@@ -13,6 +13,7 @@ namespace MageTwinstick
         private float currentFps;
         private BufferedGraphics backBuffer;
         private Rectangle display;
+        private EnemySpawner es;
 
         //Properties
         //Auto properties for the given values
@@ -31,18 +32,21 @@ namespace MageTwinstick
         //Methods
         public void SetupWorld() // Setup the world before we begin the game loop
         {
+<<<<<<< HEAD
             Player player = new Player(200, 100, @"Images\Player\Idle\0.png", new Vector2D(display.Width / 2f, display.Height / 2f), display, 10);
             Enemy gargant = new Enemy(100, 200, @"Images\Gargant\Move\0.png;Images\Gargant\Move\1.png;Images\Gargant\Move\2.png;Images\Gargant\Move\3.png;Images\Gargant\Move\4.png;Images\Gargant\Move\5.png;Images\Gargant\Move\6.png;Images\Gargant\Move\7.png", new Vector2D(0, 0), display, 10, 0, 2.0f, player);
             Enemy crawler = new Enemy(150, 75, @"Images\Crawler\Move\0.png;Images\Crawler\Move\1.png;Images\Crawler\Move\2.png;Images\Crawler\Move\3.png;Images\Crawler\Move\4.png;Images\Crawler\Move\5.png;Images\Crawler\Move\6.png;Images\Crawler\Move\7.png", new Vector2D(300, 0), display, 15, 0, 2.0f, player);
             Enemy demon = new Enemy(100, 125, @"Images\Demon\Move\0.png;Images\Demon\Move\1.png;Images\Demon\Move\2.png;Images\Demon\Move\3.png;Images\Demon\Move\4.png;Images\Demon\Move\5.png;Images\Demon\Move\6.png;Images\Demon\Move\7.png", new Vector2D(600, 0), display, 10, 0, 2.0f, player);
             Enemy scorpion = new Enemy(190, 50, @"Images\Scorpion\Move\0.png;Images\Scorpion\Move\1.png;Images\Scorpion\Move\2.png;Images\Scorpion\Move\3.png", new Vector2D(900, 0), display, 20, 0, 2.0f, player);
 
+=======
+            Player player = new Player(150, 100, @"Images\Player\Idle\0.png", new Vector2D(display.Width / 2f, display.Height / 2f), display, 10);
+            
+>>>>>>> refs/remotes/origin/master
             Objects.Add(new Arena(@"Images\Background.png", new Vector2D(0, 0), display, 1));
             Objects.Add(player);
-            Objects.Add(gargant);
-            Objects.Add(crawler);
-            Objects.Add(demon);
-            Objects.Add(scorpion);
+
+            es = new EnemySpawner(display, player);
 
             endTime = DateTime.Now;
         }
@@ -72,7 +76,8 @@ namespace MageTwinstick
             currentFps = 1000 / mill;
 
             dc.Clear(Color.White);
-
+            
+            es.Update(currentFps);
             Update(); // Update all gameobjects
             UpdateAnimation(); // update all animations
             Draw(); // draw all objects
