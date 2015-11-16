@@ -45,13 +45,13 @@ namespace MageTwinstick
 
         public override void OnCollision(GameObject other)
         {
-
+            
         }
 
         public override void Draw(Graphics dc)
         {
             //make a vector with origin in the center of the sprite
-            Vector2D playerCenter = new Vector2D(Position.X + sprite.Width / 2, Position.Y + sprite.Height / 2);
+            Vector2D playerCenter = new Vector2D(Position.X + sprite.Width / 2f, Position.Y + sprite.Height / 2f);
             //subtract that vector with the mouse position
             Vector2D vec = playerCenter.Subtract(new Vector2D(Mouse.X, Mouse.Y));
             //normalize that vector
