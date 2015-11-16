@@ -18,7 +18,15 @@ namespace MageTwinstick
         //Properteis
         //Auto properties for the values
         public Vector2D Position { get; set; }
-        public RectangleF CollisionBox { get; }
+
+        public RectangleF CollisionBox
+        {
+            get
+            {
+                collisionBox =  new RectangleF(Position.X, Position.Y, sprite.Width, sprite.Height);
+                return collisionBox;
+            }
+        }
 
         //Constructer
         public GameObject(string imagePath, Vector2D startPos, Rectangle display, float animationSpeed)

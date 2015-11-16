@@ -13,10 +13,5 @@ namespace MageTwinstick
         {
             this.speed = speed;
         }
-
-        public override void OnCollision(GameObject other)
-        {
-            throw new System.NotImplementedException();
-        }
     }
 }

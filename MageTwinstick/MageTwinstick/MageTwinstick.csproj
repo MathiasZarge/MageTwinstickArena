@@ -64,7 +64,6 @@
     <Compile Include="Mouse.cs" />
     <Compile Include="MovingObject.cs" />
     <Compile Include="Player.cs" />
-    <Compile Include="PlayerProjectile.cs" />
     <Compile Include="PowerUp.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Projectile.cs" />
@@ -274,7 +273,9 @@
     <Content Include="Images\Player\Move\7.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Images\Player\Spell.png" />
+    <Content Include="Images\Player\Spell.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Images\Scorpion\Attack\0.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
