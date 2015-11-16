@@ -31,6 +31,8 @@ namespace MageTwinstick
 
             Position.X += (1 / fps) * (velocity.X*speed);
             Position.Y += (1 / fps) * (velocity.Y*speed);
+            if (attackTimer > 0)
+                attackTimer -= 0.1f;
             base.Update(1 / fps);
         }
 
