@@ -28,7 +28,13 @@ namespace MageTwinstick
             }
         }
 
-        //Constructer
+        /// <summary>
+        /// GameObject Constructor
+        /// </summary>
+        /// <param name="imagePath"></param>
+        /// <param name="startPos"></param>
+        /// <param name="display"></param>
+        /// <param name="animationSpeed"></param>
         public GameObject(string imagePath, Vector2D startPos, Rectangle display, float animationSpeed)
         {
             //Assigning the values to the fields
@@ -51,17 +57,27 @@ namespace MageTwinstick
         }
 
         //Methods
+        /// <summary>
+        /// draws the graphics in the GameWorld
+        /// </summary>
+        /// <param name="dc"></param>
         public virtual void Draw(Graphics dc)
         {
             //Draws the sprite
             dc.DrawImage(sprite, Position.X, Position.Y, sprite.Width, sprite.Height);
         }
-
+        /// <summary>
+        /// updates the information in the GameObject
+        /// </summary>
+        /// <param name="fps"></param>
         public virtual void Update(float fps)
         {
             CheckCollision();
         }
-
+        /// <summary>
+        /// Animates the sprite on the GameObject
+        /// </summary>
+        /// <param name="fps"></param>
         public virtual void UpdateAnimation(float fps)
         {
             //make a factor based on the fps
@@ -79,7 +95,9 @@ namespace MageTwinstick
             //Apply the current frame to the sprite
             sprite = animationFrames[(int)currentFrameIndex];
         }
-
+        /// <summary>
+        /// Checks for collision with other GameObjects
+        /// </summary>
         public void CheckCollision()
         {
             //Check if the current object is colliding with any one of the object currently in the list
@@ -96,14 +114,21 @@ namespace MageTwinstick
                 }
             }
         }
-
+        /// <summary>
+        /// Checks for collision with a specific GameObject
+        /// </summary>
+        /// <param name="other"></param>
+        /// <returns></returns>
         public bool IsCollidingWith(GameObject other)
         {
             //Return wether two collisionboxes are collising
             return collisionBox.IntersectsWith(other.CollisionBox);
         }
 
-        //abstract method for functionality when colliding
+        /// <summary>
+        /// Abstract method for functionality when colliding with a specific GameObject
+        /// </summary>
+        /// <param name="other"></param>
         public abstract void OnCollision(GameObject other);
     }
 }

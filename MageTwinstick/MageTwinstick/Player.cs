@@ -87,7 +87,7 @@ namespace MageTwinstick
             dc.ResetTransform();
         }
         /// <summary>
-        /// attacks by adding a projetcile in front of the player
+        /// attacks by adding a Projetcile in front of the player
         /// </summary>
         public override void Attack()
         {
