@@ -55,16 +55,16 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Freeze.cs" />
+    <Compile Include="powerups\Freeze.cs" />
     <Compile Include="GameObject.cs" />
     <Compile Include="GameWorld.cs" />
-    <Compile Include="HealthRegen.cs" />
+    <Compile Include="powerups\HealthRegen.cs" />
     <Compile Include="Keyboard.cs" />
-    <Compile Include="ManaRegen.cs" />
+    <Compile Include="powerups\ManaRegen.cs" />
     <Compile Include="Mouse.cs" />
     <Compile Include="MovingObject.cs" />
     <Compile Include="Player.cs" />
-    <Compile Include="PowerUp.cs" />
+    <Compile Include="powerups\PowerUp.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Projectile.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -274,6 +274,12 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Images\Player\Spell.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Powerups\healthPowerUp.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Powerups\manaPowerUp.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Images\Scorpion\Attack\0.png">

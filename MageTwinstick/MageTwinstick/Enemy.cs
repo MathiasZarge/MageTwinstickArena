@@ -5,13 +5,10 @@ namespace MageTwinstick
 {
     internal class Enemy : Unit
     {
-
-
-
         public float attackTimer;
         public float coolDown;
         private Player player;
-
+        private Random random = new Random();
 
         //Methods to be used in attack  
         public Enemy(float speed, int health, string imagePath, Vector2D startPos, Rectangle display,
@@ -37,8 +34,18 @@ namespace MageTwinstick
             if (Health <= 0)
             {
                 GameWorld.ObjectsToRemove.Add(this);
+                double r = random.Next(0, 101);
+                if (r > 90)
+                {
+                    GameWorld.ObjectsToAdd.Add(new HealthRegen(@"Images\Powerups\healthPowerUp.png", new Vector2D(Position.X, Position.Y), display,1));
+                }
+                else if (r < 40)
+                {
+                    GameWorld.ObjectsToAdd.Add(new ManaRegen(@"Images\Powerups\manaPowerUp.png", new Vector2D(Position.X, Position.Y), display, 1));
+                }
+
             }
-            base.Update(1 / fps);
+            base.Update(fps);
         }
 
         public override void Draw(Graphics dc)

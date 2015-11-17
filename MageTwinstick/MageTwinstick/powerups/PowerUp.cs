@@ -5,9 +5,6 @@ namespace MageTwinstick
 {
 
     //type of PowerUp
-
-    //Type of PowerUp
-
     enum PowerUpType
     {
         Freeze, HealthRegen, ManaRegen

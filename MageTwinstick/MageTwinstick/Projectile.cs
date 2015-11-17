@@ -37,8 +37,7 @@ namespace MageTwinstick
             if (other is Enemy)
             {
                 GameWorld.ObjectsToRemove.Add(this);
-                Enemy e = other as Enemy;;
-                e.Health --;
+                (other as Enemy).Health --;
             }
         }
     }
