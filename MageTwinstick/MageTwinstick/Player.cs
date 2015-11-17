@@ -15,7 +15,10 @@ namespace MageTwinstick
             Mana = 100;
         }
 
-        // move the character in the direction of the keys
+        /// <summary>
+        /// move the character in the direction of the keys
+        /// </summary>
+        /// <param name="fps"></param>
         public override void Update(float fps)
         {
             if (Keyboard.IsKeyDown(Keys.W))
@@ -42,12 +45,18 @@ namespace MageTwinstick
 
             base.Update(fps);
         }
-
+        /// <summary>
+        /// Detects Collision with other GameObject objects
+        /// </summary>
+        /// <param name="other"></param>
         public override void OnCollision(GameObject other)
         {
             
         }
-
+        /// <summary>
+        /// draws the Graphics in the GameWorld
+        /// </summary>
+        /// <param name="dc"></param>
         public override void Draw(Graphics dc)
         {
             //make a vector with origin in the center of the sprite
@@ -69,7 +78,9 @@ namespace MageTwinstick
             //Reset the graphics
             dc.ResetTransform();
         }
-
+        /// <summary>
+        /// attacks by adding a projetcile in front of the player
+        /// </summary>
         public override void Attack()
         {
             if (Mana >= 5)
