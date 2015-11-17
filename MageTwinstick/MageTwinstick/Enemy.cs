@@ -48,6 +48,7 @@ namespace MageTwinstick
 
             if (Health <= 0)
             {
+                player.Score += 100;
                 GameWorld.ObjectsToRemove.Add(this);
                 double r = random.Next(0, 101);
                 if (r > 90)

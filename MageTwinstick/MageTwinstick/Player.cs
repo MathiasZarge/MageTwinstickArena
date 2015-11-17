@@ -8,6 +8,7 @@ namespace MageTwinstick
     class Player : Unit
     {
         //Properties
+<<<<<<< HEAD
         public double Mana { get; set; }
        /// <summary>
        /// Player Constructor
@@ -18,9 +19,14 @@ namespace MageTwinstick
        /// <param name="startPos"></param>
        /// <param name="display"></param>
        /// <param name="animationSpeed"></param>
+=======
+        public double Mana { get; set; } // Auto property for mana
+        public float Score { get; set; } = 0; // Auto property for score 
+
+>>>>>>> refs/remotes/origin/master
         public Player(float speed, int health, string imagePath, Vector2D startPos, Rectangle display, float animationSpeed) : base(speed, health, imagePath, startPos, display, animationSpeed)
         {
-            Mana = 100;
+            Mana = 100; // Set the starting mana to 100
         }
 
         /// <summary>
@@ -29,26 +35,30 @@ namespace MageTwinstick
         /// <param name="fps"></param>
         public override void Update(float fps)
         {
-            if (Keyboard.IsKeyDown(Keys.W))
+            //Check if the key is pressed and the sprote is within the display rectangle
+            if (Keyboard.IsKeyDown(Keys.W) && Position.Y > display.Top)
             {
                 Position.Y -= 1 / fps * speed;
             }
-            if (Keyboard.IsKeyDown(Keys.A))
+            //Check if the key is pressed and the sprote is within the display rectangle
+            if (Keyboard.IsKeyDown(Keys.A) && Position.X > display.Left)
             {
                 Position.X -= 1 / fps * speed;
             }
-            if (Keyboard.IsKeyDown(Keys.S))
+            //Check if the key is pressed and the sprote is within the display rectangle minus the sprite 
+            if (Keyboard.IsKeyDown(Keys.S) && Position.Y < display.Bottom - sprite.Height)
             {
                 Position.Y += 1 / fps * speed;
             }
-            if (Keyboard.IsKeyDown(Keys.D))
+            //Check if the key is pressed and the sprote is within the display rectangle minus the sprite
+            if (Keyboard.IsKeyDown(Keys.D) && Position.X < display.Right - sprite.Width)
             {
                 Position.X += 1 / fps * speed;
             }
 
-            if (Mana < 100)
+            if (Mana < 100) // If mana is less than 100
             {
-                Mana += 1/fps*10f;
+                Mana += 1/fps*10f; // regenerate mana at a set rate, depending on fps
             }
 
             base.Update(fps);
