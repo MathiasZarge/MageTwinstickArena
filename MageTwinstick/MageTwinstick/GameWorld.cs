@@ -95,10 +95,8 @@ namespace MageTwinstick
             percentage = (300f/100f)*pl.Mana;
             dc.FillRectangle(Brushes.Blue, new Rectangle(display.Right - 310, 10, Convert.ToInt32(percentage), 50));
             dc.DrawRectangle(p, new Rectangle(display.Right - 310, 10, 300, 50));
-
-#if DEBUG
-            dc.DrawString(string.Format("{0}, {1}, {2}", Convert.ToString(currentFps), Mouse.X, Mouse.Y), f, Brushes.Black, 10, 100);
-#endif
+            f = new Font("Arial", 30);
+            dc.DrawString(Convert.ToString(pl.Score), f, Brushes.Black, display.Width / 2 - 50, 10);
 
             backBuffer.Render();
         }
