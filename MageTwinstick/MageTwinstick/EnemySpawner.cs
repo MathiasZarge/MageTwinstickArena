@@ -22,9 +22,7 @@ namespace MageTwinstick
             this.player = player;
         }
 
-        /**
-        *  Updates to add enemies onto the field
-        */
+        //Updates to add enemies onto the field
         public virtual void Update(float fps)
         {
             
