@@ -11,6 +11,18 @@ namespace MageTwinstick
         private Random random = new Random();
 
         //Methods to be used in attack  
+        /// <summary>
+        /// Enemy constructor
+        /// </summary>
+        /// <param name="speed"></param>
+        /// <param name="health"></param>
+        /// <param name="imagePath"></param>
+        /// <param name="startPos"></param>
+        /// <param name="display"></param>
+        /// <param name="animationSpeed"></param>
+        /// <param name="attackTimer"></param>
+        /// <param name="coolDown"></param>
+        /// <param name="player"></param>
         public Enemy(float speed, int health, string imagePath, Vector2D startPos, Rectangle display,
             float animationSpeed, float attackTimer, float coolDown, Player player)
             : base(speed, health, imagePath, startPos, display, animationSpeed)
@@ -20,7 +32,10 @@ namespace MageTwinstick
             this.player = player;
         }
        
-        //Make the enemy chase after the player no matter the players position.
+        /// <summary>
+        /// Cause the Enemy to chase the Player regardless of the Player's position 
+        /// </summary>
+        /// <param name="fps"></param>
         public override void Update(float fps)
         {
             Vector2D velocity = this.Position.Subtract(player.Position);
@@ -33,6 +48,7 @@ namespace MageTwinstick
 
             if (Health <= 0)
             {
+                player.Score += 100;
                 GameWorld.ObjectsToRemove.Add(this);
                 double r = random.Next(0, 101);
                 if (r > 90)
@@ -47,7 +63,10 @@ namespace MageTwinstick
             }
             base.Update(fps);
         }
-
+        /// <summary>
+        /// Properly rotates and draws the objects sprite in the GameWorld
+        /// </summary>
+        /// <param name="dc"></param>
         public override void Draw(Graphics dc)
         {
             //make a vector with origin in the center of the sprite
@@ -70,7 +89,9 @@ namespace MageTwinstick
             dc.ResetTransform();
         }
 
-        //Attack command and prevents the enemy from constantly ticking damage on the player
+        /// <summary>
+        /// Attack command and prevents the Enemy from constantly damaging on the Player
+        /// </summary>
         public override void Attack()
 
         {
@@ -85,7 +106,10 @@ namespace MageTwinstick
             }
         }
 
-        //Enemy collison and its response to different objects.
+        /// <summary>
+        /// Enemy collison and its response to different GameObject's.
+        /// </summary>
+        /// <param name="other"></param>
         public override void OnCollision(GameObject other)
         {
             if (other is Projectile)
