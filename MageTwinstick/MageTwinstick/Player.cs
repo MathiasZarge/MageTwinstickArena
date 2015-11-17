@@ -48,6 +48,11 @@ namespace MageTwinstick
                 Mana += 1/fps*10f; // regenerate mana at a set rate, depending on fps
             }
 
+            if (Health <= 0)
+            {
+                
+            }
+
             base.Update(fps);
         }
         /// <summary>
