@@ -8,9 +8,22 @@ namespace MageTwinstick
     class Player : Unit
     {
         //Properties
+<<<<<<< HEAD
+        public double Mana { get; set; }
+       /// <summary>
+       /// Player Constructor
+       /// </summary>
+       /// <param name="speed"></param>
+       /// <param name="health"></param>
+       /// <param name="imagePath"></param>
+       /// <param name="startPos"></param>
+       /// <param name="display"></param>
+       /// <param name="animationSpeed"></param>
+=======
         public double Mana { get; set; } // Auto property for mana
         public float Score { get; set; } = 0; // Auto property for score 
 
+>>>>>>> refs/remotes/origin/master
         public Player(float speed, int health, string imagePath, Vector2D startPos, Rectangle display, float animationSpeed) : base(speed, health, imagePath, startPos, display, animationSpeed)
         {
             Mana = 100; // Set the starting mana to 100
@@ -84,7 +97,7 @@ namespace MageTwinstick
             dc.ResetTransform();
         }
         /// <summary>
-        /// attacks by adding a projetcile in front of the player
+        /// attacks by adding a Projetcile in front of the player
         /// </summary>
         public override void Attack()
         {
