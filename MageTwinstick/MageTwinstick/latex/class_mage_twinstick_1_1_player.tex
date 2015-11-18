@@ -9,9 +9,8 @@ Inheritance diagram for Mage\+Twinstick.\+Player\+:\begin{figure}[H]
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{class_mage_twinstick_1_1_player_ab0f3c00d033f0f20e743c04ae0eb6b11}{}{\bfseries Player} (float speed, int health, string image\+Path, \hyperlink{class_mage_twinstick_1_1_vector2_d}{Vector2\+D} start\+Pos, Rectangle display, float animation\+Speed)\label{class_mage_twinstick_1_1_player_ab0f3c00d033f0f20e743c04ae0eb6b11}
-
-\item 
+\hyperlink{class_mage_twinstick_1_1_player_ab0f3c00d033f0f20e743c04ae0eb6b11}{Player} (float speed, int health, string image\+Path, \hyperlink{class_mage_twinstick_1_1_vector2_d}{Vector2\+D} start\+Pos, Rectangle display, float animation\+Speed)
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_mage_twinstick_1_1_player}{Player} constructor \end{DoxyCompactList}\item 
 override void \hyperlink{class_mage_twinstick_1_1_player_a5324e0350784da0f66369ec5ef52516a}{Update} (float fps)
 \begin{DoxyCompactList}\small\item\em move the character in the direction of the keys \end{DoxyCompactList}\item 
 override void \hyperlink{class_mage_twinstick_1_1_player_adb9172ee6c160eb686076749d29be061}{On\+Collision} (\hyperlink{class_mage_twinstick_1_1_game_object}{Game\+Object} other)
@@ -19,14 +18,51 @@ override void \hyperlink{class_mage_twinstick_1_1_player_adb9172ee6c160eb6860767
 override void \hyperlink{class_mage_twinstick_1_1_player_a2ccf76e50c0e5fa6642da04a4a5c4fa8}{Draw} (Graphics dc)
 \begin{DoxyCompactList}\small\item\em draws the Graphics in the \hyperlink{class_mage_twinstick_1_1_game_world}{Game\+World} \end{DoxyCompactList}\item 
 override void \hyperlink{class_mage_twinstick_1_1_player_a418c80bddb416cd2cdd180ab21831f57}{Attack} ()
-\begin{DoxyCompactList}\small\item\em attacks by adding a projetcile in front of the player \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em attacks by adding a Projetcile in front of the player \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Properties}
 \begin{DoxyCompactItemize}
 \item 
 \hypertarget{class_mage_twinstick_1_1_player_a18f4e83174054293e8f60af4d66d2925}{}double {\bfseries Mana}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}\label{class_mage_twinstick_1_1_player_a18f4e83174054293e8f60af4d66d2925}
 
+\item 
+\hypertarget{class_mage_twinstick_1_1_player_aa4b4878249b47797666fb77c82184533}{}float {\bfseries Score}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}\label{class_mage_twinstick_1_1_player_aa4b4878249b47797666fb77c82184533}
+
 \end{DoxyCompactItemize}
 \subsection*{Additional Inherited Members}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_mage_twinstick_1_1_player_ab0f3c00d033f0f20e743c04ae0eb6b11}{}\index{Mage\+Twinstick\+::\+Player@{Mage\+Twinstick\+::\+Player}!Player@{Player}}
+\index{Player@{Player}!Mage\+Twinstick\+::\+Player@{Mage\+Twinstick\+::\+Player}}
+\subsubsection[{Player(float speed, int health, string image\+Path, Vector2\+D start\+Pos, Rectangle display, float animation\+Speed)}]{\setlength{\rightskip}{0pt plus 5cm}Mage\+Twinstick.\+Player.\+Player (
+\begin{DoxyParamCaption}
+\item[{float}]{speed, }
+\item[{int}]{health, }
+\item[{string}]{image\+Path, }
+\item[{{\bf Vector2\+D}}]{start\+Pos, }
+\item[{Rectangle}]{display, }
+\item[{float}]{animation\+Speed}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_mage_twinstick_1_1_player_ab0f3c00d033f0f20e743c04ae0eb6b11}
+
+
+\hyperlink{class_mage_twinstick_1_1_player}{Player} constructor 
+
+
+\begin{DoxyParams}{Parameters}
+{\em speed} & \\
+\hline
+{\em health} & \\
+\hline
+{\em image\+Path} & \\
+\hline
+{\em start\+Pos} & \\
+\hline
+{\em display} & \\
+\hline
+{\em animation\+Speed} & \\
+\hline
+\end{DoxyParams}
 
 
 \subsection{Member Function Documentation}
@@ -39,11 +75,11 @@ override void \hyperlink{class_mage_twinstick_1_1_player_a418c80bddb416cd2cdd180
 )\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_mage_twinstick_1_1_player_a418c80bddb416cd2cdd180ab21831f57}
 
 
-attacks by adding a projetcile in front of the player 
+attacks by adding a Projetcile in front of the player 
 
 
 
-Implements \hyperlink{class_mage_twinstick_1_1_unit}{Mage\+Twinstick.\+Unit}.
+Implements \hyperlink{class_mage_twinstick_1_1_unit_a98b69920e6c6c09c5cfaacbf42a31bbf}{Mage\+Twinstick.\+Unit}.
 
 \hypertarget{class_mage_twinstick_1_1_player_a2ccf76e50c0e5fa6642da04a4a5c4fa8}{}\index{Mage\+Twinstick\+::\+Player@{Mage\+Twinstick\+::\+Player}!Draw@{Draw}}
 \index{Draw@{Draw}!Mage\+Twinstick\+::\+Player@{Mage\+Twinstick\+::\+Player}}
@@ -63,7 +99,7 @@ draws the Graphics in the \hyperlink{class_mage_twinstick_1_1_game_world}{Game\+
 \end{DoxyParams}
 
 
-Reimplemented from \hyperlink{class_mage_twinstick_1_1_game_object}{Mage\+Twinstick.\+Game\+Object}.
+Reimplemented from \hyperlink{class_mage_twinstick_1_1_game_object_a11628f4d9b508e2d976ca25f716b74f5}{Mage\+Twinstick.\+Game\+Object}.
 
 \hypertarget{class_mage_twinstick_1_1_player_adb9172ee6c160eb686076749d29be061}{}\index{Mage\+Twinstick\+::\+Player@{Mage\+Twinstick\+::\+Player}!On\+Collision@{On\+Collision}}
 \index{On\+Collision@{On\+Collision}!Mage\+Twinstick\+::\+Player@{Mage\+Twinstick\+::\+Player}}
@@ -83,7 +119,7 @@ Detects Collision with other \hyperlink{class_mage_twinstick_1_1_game_object}{Ga
 \end{DoxyParams}
 
 
-Implements \hyperlink{class_mage_twinstick_1_1_game_object}{Mage\+Twinstick.\+Game\+Object}.
+Implements \hyperlink{class_mage_twinstick_1_1_game_object_a60f894a5ff911af7bfe3e4bd8abf253f}{Mage\+Twinstick.\+Game\+Object}.
 
 \hypertarget{class_mage_twinstick_1_1_player_a5324e0350784da0f66369ec5ef52516a}{}\index{Mage\+Twinstick\+::\+Player@{Mage\+Twinstick\+::\+Player}!Update@{Update}}
 \index{Update@{Update}!Mage\+Twinstick\+::\+Player@{Mage\+Twinstick\+::\+Player}}
@@ -103,7 +139,7 @@ move the character in the direction of the keys
 \end{DoxyParams}
 
 
-Reimplemented from \hyperlink{class_mage_twinstick_1_1_game_object}{Mage\+Twinstick.\+Game\+Object}.
+Reimplemented from \hyperlink{class_mage_twinstick_1_1_game_object_a3de8248d06d234f8335525bbb28ccacc}{Mage\+Twinstick.\+Game\+Object}.
 
 
 
