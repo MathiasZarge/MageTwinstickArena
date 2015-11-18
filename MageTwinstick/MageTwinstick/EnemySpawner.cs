@@ -10,22 +10,10 @@ namespace MageTwinstick
 {
     class EnemySpawner
     {
-<<<<<<< HEAD
 
-        private float time = 0;
-        private int spawnCounter = 3;
-        List<GameObject> enemy = new List<GameObject>();
-        private Rectangle display;
-        private Player player;
-        protected float angle;
-        protected float posX;
-        protected float posY;
-        private Random rnd = new Random();
-        List<bool> spawned = new List<bool> { false, false, false, false };
-=======
         /// Properties that are set beforehand for the enemies.
         private float time = 0;                  /*!<Time is set to zero in the beginning of the game*/
-        private int spawnCounter = 1;            /*!<Sets the spawnCounter to one to make sure an enemy spawns and to increase the number of enemies in latter rounds*/
+        private int spawnCounter = 3;            /*!<Sets the spawnCounter to one to make sure an enemy spawns and to increase the number of enemies in latter rounds*/
         private Rectangle display;               /*!<Property that the enemy needs in its constructor*/
         private Player player;                   /*!<Property that the enemy needs in its constructor*/
         protected float angle;                   /*!<Used to describe the angle in which the enemy will spawn*/
@@ -33,7 +21,7 @@ namespace MageTwinstick
         protected float posY;                    /*!<Used to calculate the position of the enemy on the Y axis*/
         private Random rnd = new Random();       /*!Used to create the random number to determin the position of the enemy spawning*/
         List<bool> spawned = new List<bool> { false, false, false, false };     /*!<Bools used to check if the enemies have been spawned and make sure that only the appropriate number of enemies spawn each round*/
->>>>>>> refs/remotes/origin/master
+
 
         public EnemySpawner(Rectangle display, Player player)
         {
