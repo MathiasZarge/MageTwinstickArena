@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
-using System.Drawing.Drawing2D;
+using System.Windows.Forms;
 
 namespace MageTwinstick
 {
@@ -14,12 +14,13 @@ namespace MageTwinstick
         private BufferedGraphics backBuffer;
         private Rectangle display;
         private EnemySpawner es;
-
+        
         //Properties
         //Auto properties for the given values
         public static List<GameObject> Objects { get; set; } = new List<GameObject>();
         public static List<GameObject> ObjectsToRemove { get; set; } = new List<GameObject>();
         public static List<GameObject> ObjectsToAdd { get; set; } = new List<GameObject>();
+        public bool IsRunning { get; set; } = true;
 
         //Constructer
         public GameWorld(Graphics dc, Rectangle display) //takes graphics and display as arguments
@@ -28,13 +29,21 @@ namespace MageTwinstick
             this.backBuffer = BufferedGraphicsManager.Current.Allocate(dc, display);
             this.dc = backBuffer.Graphics;
         }
+        
+        //Static Methods
+        public static void ResetStatics()
+        {
+            Objects.Clear();
+            ObjectsToRemove.Clear();
+            ObjectsToAdd.Clear();
+        }
 
         //Methods
         public void SetupWorld() // Setup the world before we begin the game loop
         {
             Player player = new Player(200, 100, @"Images\Player\Idle\0.png", new Vector2D(display.Width / 2f, display.Height / 2f), display, 10);
-          
-           
+
+
             Objects.Add(new Arena(@"Images\Background.png", new Vector2D(0, 0), display, 1));
             Objects.Add(player);
 
@@ -68,13 +77,17 @@ namespace MageTwinstick
             currentFps = 1000 / mill;
 
             dc.Clear(Color.White);
-            
-            es.Update(currentFps);
-            Update(); // Update all gameobjects
-            UpdateAnimation(); // update all animations
-            Draw(); // draw all objects
+
+            if (IsRunning)
+            {
+                es.Update(currentFps);
+                Update(); // Update all gameobjects
+                UpdateAnimation(); // update all animations
+                Draw(); // draw all objects
+            }
 
             endTime = DateTime.Now;
+
         }
 
         public void Draw()
@@ -89,10 +102,10 @@ namespace MageTwinstick
             Pen p = new Pen(Color.Black, 5);
             Font f = new Font("Arial", 16);
             Player pl = (Player)Objects.Find(x => x is Player);
-            double percentage = (300f/100f)*pl.Health;
+            double percentage = (300f / 100f) * pl.Health;
             dc.FillRectangle(Brushes.Red, new Rectangle(10, 10, Convert.ToInt32(percentage), 50));
             dc.DrawRectangle(p, new Rectangle(10, 10, 300, 50));
-            percentage = (300f/100f)*pl.Mana;
+            percentage = (300f / 100f) * pl.Mana;
             dc.FillRectangle(Brushes.Blue, new Rectangle(display.Right - 310, 10, Convert.ToInt32(percentage), 50));
             dc.DrawRectangle(p, new Rectangle(display.Right - 310, 10, 300, 50));
             f = new Font("Arial", 30);
@@ -107,6 +120,14 @@ namespace MageTwinstick
             foreach (GameObject go in Objects)
             {
                 go.Update(currentFps);
+
+                if (go is Player)
+                {
+                    if ((go as Player).Health <= 0)
+                    {
+                        IsRunning = false;
+                    }
+                }
             }
         }
 
@@ -117,6 +138,12 @@ namespace MageTwinstick
             {
                 go.UpdateAnimation(currentFps);
             }
+        }
+
+        public void Dispose()
+        {
+            backBuffer.Dispose();
+            ResetStatics();
         }
     }
 }

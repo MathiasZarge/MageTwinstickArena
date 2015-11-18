@@ -51,11 +51,11 @@ namespace MageTwinstick
                 player.Score += 100;
                 GameWorld.ObjectsToRemove.Add(this);
                 double r = random.Next(0, 101);
-                if (r > 90)
+                if (r > 95)
                 {
                     GameWorld.ObjectsToAdd.Add(new HealthRegen(@"Images\Powerups\healthPowerUp.png", new Vector2D(Position.X, Position.Y), display,1));
                 }
-                else if (r < 40)
+                else if (r < 50)
                 {
                     GameWorld.ObjectsToAdd.Add(new ManaRegen(@"Images\Powerups\manaPowerUp.png", new Vector2D(Position.X, Position.Y), display, 1));
                 }
