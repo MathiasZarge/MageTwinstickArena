@@ -69,28 +69,28 @@ namespace MageTwinstick
         /// <param name="dc"></param>
         public override void Draw(Graphics dc)
         {
-            //make a vector with origin in the center of the sprite
+            //Make a vector with origin in the center of the sprite.
             Vector2D spriteCenter = new Vector2D(Position.X + sprite.Width / 2f, Position.Y + sprite.Height / 2f);
-            //subtract that vector with the mouse position
+            //Subtract that vector with the mouse position.
             Vector2D vec = spriteCenter.Subtract(player.Position);
-            //normalize that vector
+            //Normalize that vector.
             vec.Normalize();
 
-            //calulate the angle form the normalized vector
+            //Calulate the angle form the normalized vector.
             angle = Math.Atan2(vec.Y, vec.X) * 180 / Math.PI;
 
             //Change the origin on the coordinate system to the center of the sprite
             dc.TranslateTransform(Position.X + sprite.Width / 2f, Position.Y + sprite.Height / 2f);
-            //Rotate the coordinate system the desired degrees
+            //Rotate the coordinate system the desired degrees.
             dc.RotateTransform((float)angle + 90);
-            //Draw the sprite
+            //Draw the sprite.
             dc.DrawImage(sprite, 0 - sprite.Width / 2, 0 - sprite.Height / 2, sprite.Width, sprite.Height);
-            //Reset the graphics
+            //Reset the graphics.
             dc.ResetTransform();
         }
 
         /// <summary>
-        /// Attack command and prevents the Enemy from constantly damaging on the Player
+        /// Attack command and prevents the Enemy from constantly damaging on the Player.
         /// </summary>
         public override void Attack()
 
