@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['sprite',['sprite',['../class_mage_twinstick_1_1_game_object.html#a0d553d62b8d1e865b6f106c6b3b110fe',1,'MageTwinstick::GameObject']]]
+  ['currentframeindex',['currentFrameIndex',['../class_mage_twinstick_1_1_game_object.html#a5a94b322db89e1230005a33f1205e742',1,'MageTwinstick::GameObject']]]
 ];

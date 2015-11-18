@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['gameobject',['GameObject',['../class_mage_twinstick_1_1_game_object.html#a70fd6f506e37d368c4b5dc324286e0ec',1,'MageTwinstick::GameObject']]]
+  ['enemyspawner',['EnemySpawner',['../class_mage_twinstick_1_1_enemy_spawner.html#abd353f77aec752709c47a110a15a1bb2',1,'MageTwinstick::EnemySpawner']]]
 ];
