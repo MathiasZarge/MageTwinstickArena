@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['update',['Update',['../class_mage_twinstick_1_1_player.html#a5324e0350784da0f66369ec5ef52516a',1,'MageTwinstick::Player']]]
+  ['enemyspawner',['EnemySpawner',['../class_mage_twinstick_1_1_enemy_spawner.html#abd353f77aec752709c47a110a15a1bb2',1,'MageTwinstick::EnemySpawner']]]
 ];

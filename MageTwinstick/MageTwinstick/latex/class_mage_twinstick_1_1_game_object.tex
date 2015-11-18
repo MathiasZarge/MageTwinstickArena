@@ -9,54 +9,199 @@ Inheritance diagram for Mage\+Twinstick.\+Game\+Object\+:\begin{figure}[H]
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{class_mage_twinstick_1_1_game_object_a70fd6f506e37d368c4b5dc324286e0ec}{}{\bfseries Game\+Object} (string image\+Path, \hyperlink{class_mage_twinstick_1_1_vector2_d}{Vector2\+D} start\+Pos, Rectangle display, float animation\+Speed)\label{class_mage_twinstick_1_1_game_object_a70fd6f506e37d368c4b5dc324286e0ec}
-
-\item 
-\hypertarget{class_mage_twinstick_1_1_game_object_a11628f4d9b508e2d976ca25f716b74f5}{}virtual void {\bfseries Draw} (Graphics dc)\label{class_mage_twinstick_1_1_game_object_a11628f4d9b508e2d976ca25f716b74f5}
-
-\item 
-\hypertarget{class_mage_twinstick_1_1_game_object_a3de8248d06d234f8335525bbb28ccacc}{}virtual void {\bfseries Update} (float fps)\label{class_mage_twinstick_1_1_game_object_a3de8248d06d234f8335525bbb28ccacc}
-
-\item 
-\hypertarget{class_mage_twinstick_1_1_game_object_a35d6d9af3335b978c618ab73da1215a0}{}virtual void {\bfseries Update\+Animation} (float fps)\label{class_mage_twinstick_1_1_game_object_a35d6d9af3335b978c618ab73da1215a0}
-
-\item 
-\hypertarget{class_mage_twinstick_1_1_game_object_a5ed64726e236792a162c2899b7446d66}{}void {\bfseries Check\+Collision} ()\label{class_mage_twinstick_1_1_game_object_a5ed64726e236792a162c2899b7446d66}
-
-\item 
-\hypertarget{class_mage_twinstick_1_1_game_object_a024097f67b0a8b2f38451e8df05b6b1d}{}bool {\bfseries Is\+Colliding\+With} (\hyperlink{class_mage_twinstick_1_1_game_object}{Game\+Object} other)\label{class_mage_twinstick_1_1_game_object_a024097f67b0a8b2f38451e8df05b6b1d}
-
-\item 
-\hypertarget{class_mage_twinstick_1_1_game_object_a60f894a5ff911af7bfe3e4bd8abf253f}{}abstract void {\bfseries On\+Collision} (\hyperlink{class_mage_twinstick_1_1_game_object}{Game\+Object} other)\label{class_mage_twinstick_1_1_game_object_a60f894a5ff911af7bfe3e4bd8abf253f}
-
-\end{DoxyCompactItemize}
+\hyperlink{class_mage_twinstick_1_1_game_object_a70fd6f506e37d368c4b5dc324286e0ec}{Game\+Object} (string image\+Path, \hyperlink{class_mage_twinstick_1_1_vector2_d}{Vector2\+D} start\+Pos, Rectangle \hyperlink{class_mage_twinstick_1_1_game_object_a5807df7f837dc87c8955a008d0b27b50}{display}, float \hyperlink{class_mage_twinstick_1_1_game_object_a5d21c31402c27c5a19f2a62d98720456}{animation\+Speed})
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_mage_twinstick_1_1_game_object}{Game\+Object} Constructor \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_mage_twinstick_1_1_game_object_a11628f4d9b508e2d976ca25f716b74f5}{Draw} (Graphics dc)
+\begin{DoxyCompactList}\small\item\em draws the graphics in the \hyperlink{class_mage_twinstick_1_1_game_world}{Game\+World} \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_mage_twinstick_1_1_game_object_a3de8248d06d234f8335525bbb28ccacc}{Update} (float fps)
+\begin{DoxyCompactList}\small\item\em updates the information in the \hyperlink{class_mage_twinstick_1_1_game_object}{Game\+Object} \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_mage_twinstick_1_1_game_object_a35d6d9af3335b978c618ab73da1215a0}{Update\+Animation} (float fps)
+\begin{DoxyCompactList}\small\item\em Animates the sprite on the \hyperlink{class_mage_twinstick_1_1_game_object}{Game\+Object} \end{DoxyCompactList}\item 
+void \hyperlink{class_mage_twinstick_1_1_game_object_a5ed64726e236792a162c2899b7446d66}{Check\+Collision} ()
+\begin{DoxyCompactList}\small\item\em Checks for collision with other Game\+Objects \end{DoxyCompactList}\item 
+bool \hyperlink{class_mage_twinstick_1_1_game_object_a024097f67b0a8b2f38451e8df05b6b1d}{Is\+Colliding\+With} (\hyperlink{class_mage_twinstick_1_1_game_object}{Game\+Object} other)
+\begin{DoxyCompactList}\small\item\em Checks for collision with a specific \hyperlink{class_mage_twinstick_1_1_game_object}{Game\+Object} \end{DoxyCompactList}\item 
+abstract void \hyperlink{class_mage_twinstick_1_1_game_object_a60f894a5ff911af7bfe3e4bd8abf253f}{On\+Collision} (\hyperlink{class_mage_twinstick_1_1_game_object}{Game\+Object} other)
+\begin{DoxyCompactList}\small\item\em Abstract method for functionality when colliding with a specific \hyperlink{class_mage_twinstick_1_1_game_object}{Game\+Object} \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{class_mage_twinstick_1_1_game_object_a0d553d62b8d1e865b6f106c6b3b110fe}{}Image {\bfseries sprite}\label{class_mage_twinstick_1_1_game_object_a0d553d62b8d1e865b6f106c6b3b110fe}
+\hypertarget{class_mage_twinstick_1_1_game_object_a0d553d62b8d1e865b6f106c6b3b110fe}{}Image \hyperlink{class_mage_twinstick_1_1_game_object_a0d553d62b8d1e865b6f106c6b3b110fe}{sprite}\label{class_mage_twinstick_1_1_game_object_a0d553d62b8d1e865b6f106c6b3b110fe}
 
-\item 
-\hypertarget{class_mage_twinstick_1_1_game_object_a5807df7f837dc87c8955a008d0b27b50}{}Rectangle {\bfseries display}\label{class_mage_twinstick_1_1_game_object_a5807df7f837dc87c8955a008d0b27b50}
+\begin{DoxyCompactList}\small\item\em Image sprite for the \hyperlink{class_mage_twinstick_1_1_game_object}{Game\+Object}. \end{DoxyCompactList}\item 
+\hypertarget{class_mage_twinstick_1_1_game_object_a5807df7f837dc87c8955a008d0b27b50}{}Rectangle \hyperlink{class_mage_twinstick_1_1_game_object_a5807df7f837dc87c8955a008d0b27b50}{display}\label{class_mage_twinstick_1_1_game_object_a5807df7f837dc87c8955a008d0b27b50}
 
-\item 
-\hypertarget{class_mage_twinstick_1_1_game_object_a8cc6f0911171f56d011803b3ab70a7b5}{}List$<$ Image $>$ {\bfseries animation\+Frames}\label{class_mage_twinstick_1_1_game_object_a8cc6f0911171f56d011803b3ab70a7b5}
+\begin{DoxyCompactList}\small\item\em Rectangle for the display. \end{DoxyCompactList}\item 
+\hypertarget{class_mage_twinstick_1_1_game_object_a8cc6f0911171f56d011803b3ab70a7b5}{}List$<$ Image $>$ \hyperlink{class_mage_twinstick_1_1_game_object_a8cc6f0911171f56d011803b3ab70a7b5}{animation\+Frames}\label{class_mage_twinstick_1_1_game_object_a8cc6f0911171f56d011803b3ab70a7b5}
 
-\item 
-\hypertarget{class_mage_twinstick_1_1_game_object_a5a94b322db89e1230005a33f1205e742}{}float {\bfseries current\+Frame\+Index}\label{class_mage_twinstick_1_1_game_object_a5a94b322db89e1230005a33f1205e742}
+\begin{DoxyCompactList}\small\item\em List of images for animated objects. \end{DoxyCompactList}\item 
+\hypertarget{class_mage_twinstick_1_1_game_object_a5a94b322db89e1230005a33f1205e742}{}float \hyperlink{class_mage_twinstick_1_1_game_object_a5a94b322db89e1230005a33f1205e742}{current\+Frame\+Index}\label{class_mage_twinstick_1_1_game_object_a5a94b322db89e1230005a33f1205e742}
 
-\item 
-\hypertarget{class_mage_twinstick_1_1_game_object_a5d21c31402c27c5a19f2a62d98720456}{}float {\bfseries animation\+Speed}\label{class_mage_twinstick_1_1_game_object_a5d21c31402c27c5a19f2a62d98720456}
+\begin{DoxyCompactList}\small\item\em the current Frame in the animation \end{DoxyCompactList}\item 
+\hypertarget{class_mage_twinstick_1_1_game_object_a5d21c31402c27c5a19f2a62d98720456}{}float \hyperlink{class_mage_twinstick_1_1_game_object_a5d21c31402c27c5a19f2a62d98720456}{animation\+Speed}\label{class_mage_twinstick_1_1_game_object_a5d21c31402c27c5a19f2a62d98720456}
 
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em the speed of the animation \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Properties}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{class_mage_twinstick_1_1_game_object_a74cf54e9808f3a9f93fa5c837076a7f0}{}\hyperlink{class_mage_twinstick_1_1_vector2_d}{Vector2\+D} {\bfseries Position}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}\label{class_mage_twinstick_1_1_game_object_a74cf54e9808f3a9f93fa5c837076a7f0}
+\hyperlink{class_mage_twinstick_1_1_vector2_d}{Vector2\+D} \hyperlink{class_mage_twinstick_1_1_game_object_a74cf54e9808f3a9f93fa5c837076a7f0}{Position}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em 2\+D Vector for the object starting position \end{DoxyCompactList}\item 
+Rectangle\+F \hyperlink{class_mage_twinstick_1_1_game_object_a66a2645b4fda01d5dd2f5e311c338b90}{Collision\+Box}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Rectanglge for the Game\+Objects collider \end{DoxyCompactList}\end{DoxyCompactItemize}
 
-\item 
-\hypertarget{class_mage_twinstick_1_1_game_object_a66a2645b4fda01d5dd2f5e311c338b90}{}Rectangle\+F {\bfseries Collision\+Box}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}\label{class_mage_twinstick_1_1_game_object_a66a2645b4fda01d5dd2f5e311c338b90}
 
-\end{DoxyCompactItemize}
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_mage_twinstick_1_1_game_object_a70fd6f506e37d368c4b5dc324286e0ec}{}\index{Mage\+Twinstick\+::\+Game\+Object@{Mage\+Twinstick\+::\+Game\+Object}!Game\+Object@{Game\+Object}}
+\index{Game\+Object@{Game\+Object}!Mage\+Twinstick\+::\+Game\+Object@{Mage\+Twinstick\+::\+Game\+Object}}
+\subsubsection[{Game\+Object(string image\+Path, Vector2\+D start\+Pos, Rectangle display, float animation\+Speed)}]{\setlength{\rightskip}{0pt plus 5cm}Mage\+Twinstick.\+Game\+Object.\+Game\+Object (
+\begin{DoxyParamCaption}
+\item[{string}]{image\+Path, }
+\item[{{\bf Vector2\+D}}]{start\+Pos, }
+\item[{Rectangle}]{display, }
+\item[{float}]{animation\+Speed}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_mage_twinstick_1_1_game_object_a70fd6f506e37d368c4b5dc324286e0ec}
+
+
+\hyperlink{class_mage_twinstick_1_1_game_object}{Game\+Object} Constructor 
+
+
+\begin{DoxyParams}{Parameters}
+{\em image\+Path} & Image path for the sprite\\
+\hline
+{\em start\+Pos} & The starting position of the \hyperlink{class_mage_twinstick_1_1_game_object}{Game\+Object}\\
+\hline
+{\em display} & \\
+\hline
+{\em animation\+Speed} & Animation speed for animated objects\\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_mage_twinstick_1_1_game_object_a5ed64726e236792a162c2899b7446d66}{}\index{Mage\+Twinstick\+::\+Game\+Object@{Mage\+Twinstick\+::\+Game\+Object}!Check\+Collision@{Check\+Collision}}
+\index{Check\+Collision@{Check\+Collision}!Mage\+Twinstick\+::\+Game\+Object@{Mage\+Twinstick\+::\+Game\+Object}}
+\subsubsection[{Check\+Collision()}]{\setlength{\rightskip}{0pt plus 5cm}void Mage\+Twinstick.\+Game\+Object.\+Check\+Collision (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_mage_twinstick_1_1_game_object_a5ed64726e236792a162c2899b7446d66}
+
+
+Checks for collision with other Game\+Objects 
+
+\hypertarget{class_mage_twinstick_1_1_game_object_a11628f4d9b508e2d976ca25f716b74f5}{}\index{Mage\+Twinstick\+::\+Game\+Object@{Mage\+Twinstick\+::\+Game\+Object}!Draw@{Draw}}
+\index{Draw@{Draw}!Mage\+Twinstick\+::\+Game\+Object@{Mage\+Twinstick\+::\+Game\+Object}}
+\subsubsection[{Draw(\+Graphics dc)}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Mage\+Twinstick.\+Game\+Object.\+Draw (
+\begin{DoxyParamCaption}
+\item[{Graphics}]{dc}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_mage_twinstick_1_1_game_object_a11628f4d9b508e2d976ca25f716b74f5}
+
+
+draws the graphics in the \hyperlink{class_mage_twinstick_1_1_game_world}{Game\+World} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dc} & G\+D\+I+ class for drawing the sprite\\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \hyperlink{class_mage_twinstick_1_1_player_a2ccf76e50c0e5fa6642da04a4a5c4fa8}{Mage\+Twinstick.\+Player}.
+
+\hypertarget{class_mage_twinstick_1_1_game_object_a024097f67b0a8b2f38451e8df05b6b1d}{}\index{Mage\+Twinstick\+::\+Game\+Object@{Mage\+Twinstick\+::\+Game\+Object}!Is\+Colliding\+With@{Is\+Colliding\+With}}
+\index{Is\+Colliding\+With@{Is\+Colliding\+With}!Mage\+Twinstick\+::\+Game\+Object@{Mage\+Twinstick\+::\+Game\+Object}}
+\subsubsection[{Is\+Colliding\+With(\+Game\+Object other)}]{\setlength{\rightskip}{0pt plus 5cm}bool Mage\+Twinstick.\+Game\+Object.\+Is\+Colliding\+With (
+\begin{DoxyParamCaption}
+\item[{{\bf Game\+Object}}]{other}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_mage_twinstick_1_1_game_object_a024097f67b0a8b2f38451e8df05b6b1d}
+
+
+Checks for collision with a specific \hyperlink{class_mage_twinstick_1_1_game_object}{Game\+Object} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & The other \hyperlink{class_mage_twinstick_1_1_game_object}{Game\+Object}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\hypertarget{class_mage_twinstick_1_1_game_object_a60f894a5ff911af7bfe3e4bd8abf253f}{}\index{Mage\+Twinstick\+::\+Game\+Object@{Mage\+Twinstick\+::\+Game\+Object}!On\+Collision@{On\+Collision}}
+\index{On\+Collision@{On\+Collision}!Mage\+Twinstick\+::\+Game\+Object@{Mage\+Twinstick\+::\+Game\+Object}}
+\subsubsection[{On\+Collision(\+Game\+Object other)}]{\setlength{\rightskip}{0pt plus 5cm}abstract void Mage\+Twinstick.\+Game\+Object.\+On\+Collision (
+\begin{DoxyParamCaption}
+\item[{{\bf Game\+Object}}]{other}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_mage_twinstick_1_1_game_object_a60f894a5ff911af7bfe3e4bd8abf253f}
+
+
+Abstract method for functionality when colliding with a specific \hyperlink{class_mage_twinstick_1_1_game_object}{Game\+Object} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & The other \hyperlink{class_mage_twinstick_1_1_game_object}{Game\+Object}\\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \hyperlink{class_mage_twinstick_1_1_player_adb9172ee6c160eb686076749d29be061}{Mage\+Twinstick.\+Player}, \hyperlink{class_mage_twinstick_1_1_projectile_ad646d013997eceb12a0ac2f5df56d3bb}{Mage\+Twinstick.\+Projectile}, and \hyperlink{class_mage_twinstick_1_1_arena_a12cdc5acc58ee006eb0b5a47507934fc}{Mage\+Twinstick.\+Arena}.
+
+\hypertarget{class_mage_twinstick_1_1_game_object_a3de8248d06d234f8335525bbb28ccacc}{}\index{Mage\+Twinstick\+::\+Game\+Object@{Mage\+Twinstick\+::\+Game\+Object}!Update@{Update}}
+\index{Update@{Update}!Mage\+Twinstick\+::\+Game\+Object@{Mage\+Twinstick\+::\+Game\+Object}}
+\subsubsection[{Update(float fps)}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Mage\+Twinstick.\+Game\+Object.\+Update (
+\begin{DoxyParamCaption}
+\item[{float}]{fps}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_mage_twinstick_1_1_game_object_a3de8248d06d234f8335525bbb28ccacc}
+
+
+updates the information in the \hyperlink{class_mage_twinstick_1_1_game_object}{Game\+Object} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em fps} & Fps used to update based on time\\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \hyperlink{class_mage_twinstick_1_1_player_a5324e0350784da0f66369ec5ef52516a}{Mage\+Twinstick.\+Player}, and \hyperlink{class_mage_twinstick_1_1_projectile_a9208eff25bc92289191d5470bbc7015a}{Mage\+Twinstick.\+Projectile}.
+
+\hypertarget{class_mage_twinstick_1_1_game_object_a35d6d9af3335b978c618ab73da1215a0}{}\index{Mage\+Twinstick\+::\+Game\+Object@{Mage\+Twinstick\+::\+Game\+Object}!Update\+Animation@{Update\+Animation}}
+\index{Update\+Animation@{Update\+Animation}!Mage\+Twinstick\+::\+Game\+Object@{Mage\+Twinstick\+::\+Game\+Object}}
+\subsubsection[{Update\+Animation(float fps)}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Mage\+Twinstick.\+Game\+Object.\+Update\+Animation (
+\begin{DoxyParamCaption}
+\item[{float}]{fps}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_mage_twinstick_1_1_game_object_a35d6d9af3335b978c618ab73da1215a0}
+
+
+Animates the sprite on the \hyperlink{class_mage_twinstick_1_1_game_object}{Game\+Object} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em fps} & Fps used to update based on time\\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Property Documentation}
+\hypertarget{class_mage_twinstick_1_1_game_object_a66a2645b4fda01d5dd2f5e311c338b90}{}\index{Mage\+Twinstick\+::\+Game\+Object@{Mage\+Twinstick\+::\+Game\+Object}!Collision\+Box@{Collision\+Box}}
+\index{Collision\+Box@{Collision\+Box}!Mage\+Twinstick\+::\+Game\+Object@{Mage\+Twinstick\+::\+Game\+Object}}
+\subsubsection[{Collision\+Box}]{\setlength{\rightskip}{0pt plus 5cm}Rectangle\+F Mage\+Twinstick.\+Game\+Object.\+Collision\+Box\hspace{0.3cm}{\ttfamily [get]}}\label{class_mage_twinstick_1_1_game_object_a66a2645b4fda01d5dd2f5e311c338b90}
+
+
+Rectanglge for the Game\+Objects collider 
+
+\hypertarget{class_mage_twinstick_1_1_game_object_a74cf54e9808f3a9f93fa5c837076a7f0}{}\index{Mage\+Twinstick\+::\+Game\+Object@{Mage\+Twinstick\+::\+Game\+Object}!Position@{Position}}
+\index{Position@{Position}!Mage\+Twinstick\+::\+Game\+Object@{Mage\+Twinstick\+::\+Game\+Object}}
+\subsubsection[{Position}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vector2\+D} Mage\+Twinstick.\+Game\+Object.\+Position\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\label{class_mage_twinstick_1_1_game_object_a74cf54e9808f3a9f93fa5c837076a7f0}
+
+
+2\+D Vector for the object starting position 
+
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}

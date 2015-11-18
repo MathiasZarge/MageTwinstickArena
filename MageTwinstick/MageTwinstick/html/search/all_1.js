@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['dispose',['Dispose',['../class_mage_twinstick_1_1_form1.html#a0c6a13fd61a1b440f8c57c418238af9d',1,'MageTwinstick::Form1']]],
-  ['draw',['Draw',['../class_mage_twinstick_1_1_player.html#a2ccf76e50c0e5fa6642da04a4a5c4fa8',1,'MageTwinstick::Player']]]
+  ['checkcollision',['CheckCollision',['../class_mage_twinstick_1_1_game_object.html#a5ed64726e236792a162c2899b7446d66',1,'MageTwinstick::GameObject']]],
+  ['collisionbox',['CollisionBox',['../class_mage_twinstick_1_1_game_object.html#a66a2645b4fda01d5dd2f5e311c338b90',1,'MageTwinstick::GameObject']]],
+  ['currentframeindex',['currentFrameIndex',['../class_mage_twinstick_1_1_game_object.html#a5a94b322db89e1230005a33f1205e742',1,'MageTwinstick::GameObject']]]
 ];

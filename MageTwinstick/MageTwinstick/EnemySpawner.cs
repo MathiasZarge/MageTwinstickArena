@@ -10,6 +10,7 @@ namespace MageTwinstick
 {
     class EnemySpawner
     {
+<<<<<<< HEAD
 
         private float time = 0;
         private int spawnCounter = 3;
@@ -21,6 +22,18 @@ namespace MageTwinstick
         protected float posY;
         private Random rnd = new Random();
         List<bool> spawned = new List<bool> { false, false, false, false };
+=======
+        /// Properties that are set beforehand for the enemies.
+        private float time = 0;                  /*!<Time is set to zero in the beginning of the game*/
+        private int spawnCounter = 1;            /*!<Sets the spawnCounter to one to make sure an enemy spawns and to increase the number of enemies in latter rounds*/
+        private Rectangle display;               /*!<Property that the enemy needs in its constructor*/
+        private Player player;                   /*!<Property that the enemy needs in its constructor*/
+        protected float angle;                   /*!<Used to describe the angle in which the enemy will spawn*/
+        protected float posX;                    /*!<Used to calculate the position of the enemy on the X axis*/
+        protected float posY;                    /*!<Used to calculate the position of the enemy on the Y axis*/
+        private Random rnd = new Random();       /*!Used to create the random number to determin the position of the enemy spawning*/
+        List<bool> spawned = new List<bool> { false, false, false, false };     /*!<Bools used to check if the enemies have been spawned and make sure that only the appropriate number of enemies spawn each round*/
+>>>>>>> refs/remotes/origin/master
 
         public EnemySpawner(Rectangle display, Player player)
         {
@@ -46,7 +59,8 @@ namespace MageTwinstick
                     posY = 500f * (float)Math.Sin(angle) + display.Height / 2;
                     GameWorld.ObjectsToAdd.Add(new Enemy(100, 75, @"Images\Crawler\Move\0.png;Images\Crawler\Move\1.png;Images\Crawler\Move\2.png;Images\Crawler\Move\3.png;Images\Crawler\Move\4.png;Images\Crawler\Move\5.png;Images\Crawler\Move\6.png;Images\Crawler\Move\7.png", new Vector2D(posX, posY), display, 15, 0, 2.0f, player));
                 }
-                spawned[0] = true;
+                
+                spawned[0] = true; //!<Setting the enemy spawner to true, to make sure that only the appropriate number of enemies is spawned each round.
             }
             //Most of the functions below are the same as the above.
             if (time >= 5 && !spawned[1])

@@ -5,24 +5,24 @@ namespace MageTwinstick
 {
     internal class Enemy : Unit
     {
-        public float attackTimer;
-        public float coolDown;
-        private Player player;
-        private Random random = new Random();
+        public float attackTimer; //!< Used to calculate when an attack is ready
+        public float coolDown; //!< Denotes the time between attacks   
+        private Player player; //!< Keeps track of the player
+        private Random random = new Random(); //!< Random used to drop powerups
 
         //Methods to be used in attack  
         /// <summary>
         /// Enemy constructor
         /// </summary>
-        /// <param name="speed"></param>
-        /// <param name="health"></param>
-        /// <param name="imagePath"></param>
-        /// <param name="startPos"></param>
-        /// <param name="display"></param>
-        /// <param name="animationSpeed"></param>
-        /// <param name="attackTimer"></param>
-        /// <param name="coolDown"></param>
-        /// <param name="player"></param>
+        /// <param name="speed">Enemy movement speed</param>
+        /// <param name="health">Enemy starting health</param>
+        /// <param name="imagePath">Image path for the sprite</param>
+        /// <param name="startPos">Starting position</param>
+        /// <param name="display">Display rectangle</param>
+        /// <param name="animationSpeed">Speed of the animation</param>
+        /// <param name="attackTimer">Countdown for when an attack is ready</param>
+        /// <param name="coolDown">Time between attacks</param>
+        /// <param name="player">Keeps track of the player</param>
         public Enemy(float speed, int health, string imagePath, Vector2D startPos, Rectangle display,
             float animationSpeed, float attackTimer, float coolDown, Player player)
             : base(speed, health, imagePath, startPos, display, animationSpeed)
@@ -66,31 +66,31 @@ namespace MageTwinstick
         /// <summary>
         /// Properly rotates and draws the objects sprite in the GameWorld
         /// </summary>
-        /// <param name="dc"></param>
+        /// <param name="dc">GDI+ for drawing the sprite</param>
         public override void Draw(Graphics dc)
         {
-            //make a vector with origin in the center of the sprite
+            //Make a vector with origin in the center of the sprite.
             Vector2D spriteCenter = new Vector2D(Position.X + sprite.Width / 2f, Position.Y + sprite.Height / 2f);
-            //subtract that vector with the mouse position
+            //Subtract that vector with the mouse position.
             Vector2D vec = spriteCenter.Subtract(player.Position);
-            //normalize that vector
+            //Normalize that vector.
             vec.Normalize();
 
-            //calulate the angle form the normalized vector
+            //Calulate the angle form the normalized vector.
             angle = Math.Atan2(vec.Y, vec.X) * 180 / Math.PI;
 
             //Change the origin on the coordinate system to the center of the sprite
             dc.TranslateTransform(Position.X + sprite.Width / 2f, Position.Y + sprite.Height / 2f);
-            //Rotate the coordinate system the desired degrees
+            //Rotate the coordinate system the desired degrees.
             dc.RotateTransform((float)angle + 90);
-            //Draw the sprite
+            //Draw the sprite.
             dc.DrawImage(sprite, 0 - sprite.Width / 2, 0 - sprite.Height / 2, sprite.Width, sprite.Height);
-            //Reset the graphics
+            //Reset the graphics.
             dc.ResetTransform();
         }
 
         /// <summary>
-        /// Attack command and prevents the Enemy from constantly damaging on the Player
+        /// Attack command and prevents the Enemy from constantly damaging on the Player.
         /// </summary>
         public override void Attack()
 
@@ -109,7 +109,7 @@ namespace MageTwinstick
         /// <summary>
         /// Enemy collison and its response to different GameObject's.
         /// </summary>
-        /// <param name="other"></param>
+        /// <param name="other">The other GameObject</param>
         public override void OnCollision(GameObject other)
         {
             if (other is Projectile)

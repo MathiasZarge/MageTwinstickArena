@@ -6,17 +6,22 @@ namespace MageTwinstick
     abstract class GameObject
     {
         //fields
-        protected Image sprite;
-        protected Rectangle display;
-        protected List<Image> animationFrames;
-        protected float currentFrameIndex;
-        protected float animationSpeed;
-        private RectangleF collisionBox;
+        protected Image sprite; //!< Image sprite for the GameObject
+        protected Rectangle display; //!< Rectangle for the display
+        protected List<Image> animationFrames; //!< List of images for animated objects
+        protected float currentFrameIndex;//!< the current Frame in the animation 
+        protected float animationSpeed;//!< the speed of the animation
+        private RectangleF collisionBox;//!< the collider rectangle
         
         //Properteis
         //Auto properties for the values
+        /// <summary>
+        /// 2D Vector for the GameObject  position
+        /// </summary>
         public Vector2D Position { get; set; }
-
+        /// <summary>
+        /// Rectanglge for the GameObjects collider
+        /// </summary>
         public RectangleF CollisionBox
         {
             get
@@ -29,10 +34,10 @@ namespace MageTwinstick
         /// <summary>
         /// GameObject Constructor
         /// </summary>
-        /// <param name="imagePath"></param>
-        /// <param name="startPos"></param>
-        /// <param name="display"></param>
-        /// <param name="animationSpeed"></param>
+        /// <param name="imagePath">Image path for the sprite</param>
+        /// <param name="startPos">The starting position of the GameObject</param>
+        /// <param name="display">Rectangle for the diplay</param>
+        /// <param name="animationSpeed">Animation speed for animated objects</param>
         public GameObject(string imagePath, Vector2D startPos, Rectangle display, float animationSpeed)
         {
             //Assigning the values to the fields
@@ -58,7 +63,7 @@ namespace MageTwinstick
         /// <summary>
         /// draws the graphics in the GameWorld
         /// </summary>
-        /// <param name="dc"></param>
+        /// <param name="dc">GDI+ class for drawing the sprite</param>
         public virtual void Draw(Graphics dc)
         {
             //Draws the sprite
@@ -67,7 +72,7 @@ namespace MageTwinstick
         /// <summary>
         /// updates the information in the GameObject
         /// </summary>
-        /// <param name="fps"></param>
+        /// <param name="fps">Fps used to update based on time</param>
         public virtual void Update(float fps)
         {
             CheckCollision();
@@ -75,7 +80,7 @@ namespace MageTwinstick
         /// <summary>
         /// Animates the sprite on the GameObject
         /// </summary>
-        /// <param name="fps"></param>
+        /// <param name="fps">Fps used to update based on time</param>
         public virtual void UpdateAnimation(float fps)
         {
             //make a factor based on the fps
@@ -115,7 +120,7 @@ namespace MageTwinstick
         /// <summary>
         /// Checks for collision with a specific GameObject
         /// </summary>
-        /// <param name="other"></param>
+        /// <param name="other">The other GameObject</param>
         /// <returns></returns>
         public bool IsCollidingWith(GameObject other)
         {
@@ -126,7 +131,7 @@ namespace MageTwinstick
         /// <summary>
         /// Abstract method for functionality when colliding with a specific GameObject
         /// </summary>
-        /// <param name="other"></param>
+        /// <param name="other">The other GameObject</param>
         public abstract void OnCollision(GameObject other);
     }
 }
