@@ -14,6 +14,7 @@ namespace MageTwinstick
         private BufferedGraphics backBuffer;
         private Rectangle display;
         private EnemySpawner es;
+        private bool isRunning = true;
 
         //Properties
         //Auto properties for the given values
@@ -33,8 +34,8 @@ namespace MageTwinstick
         public void SetupWorld() // Setup the world before we begin the game loop
         {
             Player player = new Player(200, 100, @"Images\Player\Idle\0.png", new Vector2D(display.Width / 2f, display.Height / 2f), display, 10);
-          
-           
+
+
             Objects.Add(new Arena(@"Images\Background.png", new Vector2D(0, 0), display, 1));
             Objects.Add(player);
 
@@ -68,13 +69,14 @@ namespace MageTwinstick
             currentFps = 1000 / mill;
 
             dc.Clear(Color.White);
-            
+
             es.Update(currentFps);
             Update(); // Update all gameobjects
             UpdateAnimation(); // update all animations
             Draw(); // draw all objects
 
             endTime = DateTime.Now;
+
         }
 
         public void Draw()
@@ -89,10 +91,10 @@ namespace MageTwinstick
             Pen p = new Pen(Color.Black, 5);
             Font f = new Font("Arial", 16);
             Player pl = (Player)Objects.Find(x => x is Player);
-            double percentage = (300f/100f)*pl.Health;
+            double percentage = (300f / 100f) * pl.Health;
             dc.FillRectangle(Brushes.Red, new Rectangle(10, 10, Convert.ToInt32(percentage), 50));
             dc.DrawRectangle(p, new Rectangle(10, 10, 300, 50));
-            percentage = (300f/100f)*pl.Mana;
+            percentage = (300f / 100f) * pl.Mana;
             dc.FillRectangle(Brushes.Blue, new Rectangle(display.Right - 310, 10, Convert.ToInt32(percentage), 50));
             dc.DrawRectangle(p, new Rectangle(display.Right - 310, 10, 300, 50));
             f = new Font("Arial", 30);

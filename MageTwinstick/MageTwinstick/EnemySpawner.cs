@@ -42,8 +42,8 @@ namespace MageTwinstick
                 {
                     //Creates this type of enemy in the game.
                     angle = (float)(rnd.NextDouble() * 360);
-                    posX = 600f * (float)Math.Cos(angle) + display.Width / 2;
-                    posY = 600f * (float)Math.Sin(angle) + display.Height / 2;
+                    posX = 650f * (float)Math.Cos(angle) + display.Width / 2;
+                    posY = 500f * (float)Math.Sin(angle) + display.Height / 2;
                     GameWorld.ObjectsToAdd.Add(new Enemy(100, 75, @"Images\Crawler\Move\0.png;Images\Crawler\Move\1.png;Images\Crawler\Move\2.png;Images\Crawler\Move\3.png;Images\Crawler\Move\4.png;Images\Crawler\Move\5.png;Images\Crawler\Move\6.png;Images\Crawler\Move\7.png", new Vector2D(posX, posY), display, 15, 0, 2.0f, player));
                 }
                 spawned[0] = true;
@@ -54,8 +54,8 @@ namespace MageTwinstick
                 for (int i = 0; i < spawnCounter; i++)
                 {
                     angle = (float)(rnd.NextDouble() * 360);
-                    posX = 600f * (float)Math.Cos(angle) + display.Width / 2;
-                    posY = 600f * (float)Math.Sin(angle) + display.Height / 2;
+                    posX = 650f * (float)Math.Cos(angle) + display.Width / 2;
+                    posY = 500f * (float)Math.Sin(angle) + display.Height / 2;
                     GameWorld.ObjectsToAdd.Add(new Enemy(125, 50, @"Images\Scorpion\Move\0.png;Images\Scorpion\Move\1.png;Images\Scorpion\Move\2.png;Images\Scorpion\Move\3.png", new Vector2D(posX, posY), display, 20, 0, 2.0f, player));
                 }
                 spawned[1] = true;
@@ -65,8 +65,8 @@ namespace MageTwinstick
                 for (int i = 0; i < spawnCounter; i++)
                 {
                     angle = (float)(rnd.NextDouble() * 360);
-                    posX = 600f * (float)Math.Cos(angle) + display.Width / 2;
-                    posY = 600f * (float)Math.Sin(angle) + display.Height / 2;
+                    posX = 650f * (float)Math.Cos(angle) + display.Width / 2;
+                    posY = 500f * (float)Math.Sin(angle) + display.Height / 2;
                     GameWorld.ObjectsToAdd.Add(new Enemy(50, 125, @"Images\Demon\Move\0.png;Images\Demon\Move\1.png;Images\Demon\Move\2.png;Images\Demon\Move\3.png;Images\Demon\Move\4.png;Images\Demon\Move\5.png;Images\Demon\Move\6.png;Images\Demon\Move\7.png", new Vector2D(posX, posY), display, 10, 0, 2.0f, player));
                 }
                 spawned[2] = true;
@@ -76,8 +76,8 @@ namespace MageTwinstick
                 for (int i = 0; i < spawnCounter; i++)
                 {
                     angle = (float)(rnd.NextDouble() * 360);
-                    posX = 600f * (float)Math.Cos(angle) + display.Width / 2;
-                    posY = 600f * (float)Math.Sin(angle) + display.Height / 2;
+                    posX = 650f * (float)Math.Cos(angle) + display.Width / 2;
+                    posY = 500f * (float)Math.Sin(angle) + display.Height / 2;
                     GameWorld.ObjectsToAdd.Add(new Enemy(50, 200, @"Images\Gargant\Move\0.png;Images\Gargant\Move\1.png;Images\Gargant\Move\2.png;Images\Gargant\Move\3.png;Images\Gargant\Move\4.png;Images\Gargant\Move\5.png;Images\Gargant\Move\6.png;Images\Gargant\Move\7.png", new Vector2D(posX, posY), display, 10, 0, 2.0f, player));
                 }
                 spawned[0] = false;

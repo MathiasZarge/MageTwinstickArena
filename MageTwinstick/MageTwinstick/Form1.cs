@@ -16,6 +16,8 @@ namespace MageTwinstick
         // Fields
         private Graphics dc;
         private GameWorld gameWorld;
+        private bool isRunning = true;
+        private bool paused = false;
 
         public Form1()
         {
@@ -24,8 +26,12 @@ namespace MageTwinstick
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            //run gameloop every tick
-            gameWorld.GameLoop();
+            if (isRunning)
+            {
+                //run gameloop every tick
+                gameWorld.GameLoop();
+            }
+
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -51,6 +57,21 @@ namespace MageTwinstick
                     Player p = go as Player;
                     p.Attack();
                 }
+            }
+        }
+
+        private void Form1_KeyDown(object sender, KeyEventArgs e)
+        {
+
+            if (e.KeyCode == Keys.Escape && !paused)
+            {
+                isRunning = false;
+                paused = true;
+            }
+            else if (e.KeyCode == Keys.Escape && paused)
+            {
+                isRunning = true;
+                paused = false;
             }
         }
     }
