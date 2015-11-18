@@ -8,17 +8,23 @@ namespace MageTwinstick
     class Player : Unit
     {
         //Properties
-        public double Mana { get; set; } // Auto property for mana
-        public float Score { get; set; } = 0; // Auto property for score 
+        /// <summary>
+        /// Auto property for mana
+        /// </summary>
+        public double Mana { get; set; }
+        /// <summary>
+        /// Auto property for score
+        /// </summary>
+        public float Score { get; set; } = 0;
         /// <summary>
         /// Player constructor
         /// </summary>
-        /// <param name="speed"></param>
-        /// <param name="health"></param>
-        /// <param name="imagePath"></param>
-        /// <param name="startPos"></param>
-        /// <param name="display"></param>
-        /// <param name="animationSpeed"></param>
+        /// <param name="speed">The Player movement speed</param>
+        /// <param name="health">The Player health</param>
+        /// <param name="imagePath">The path to the Player sprite</param>
+        /// <param name="startPos">The Player starting position</param>
+        /// <param name="display">The display rectangle</param>
+        /// <param name="animationSpeed">The animation speed for the Player</param>
         public Player(float speed, int health, string imagePath, Vector2D startPos, Rectangle display, float animationSpeed) : base(speed, health, imagePath, startPos, display, animationSpeed)
         {
             Mana = 100; // Set the starting mana to 100
@@ -27,7 +33,7 @@ namespace MageTwinstick
         /// <summary>
         /// move the character in the direction of the keys
         /// </summary>
-        /// <param name="fps"></param>
+        /// <param name="fps">The current fps</param>
         public override void Update(float fps)
         {
             //Check if the key is pressed and the sprote is within the display rectangle
@@ -61,7 +67,7 @@ namespace MageTwinstick
         /// <summary>
         /// Detects Collision with other GameObject objects
         /// </summary>
-        /// <param name="other"></param>
+        /// <param name="other">The other GameObject</param>
         public override void OnCollision(GameObject other)
         {
             
@@ -69,7 +75,7 @@ namespace MageTwinstick
         /// <summary>
         /// draws the Graphics in the GameWorld
         /// </summary>
-        /// <param name="dc"></param>
+        /// <param name="dc">GDI+ for drawing the sprite</param>
         public override void Draw(Graphics dc)
         {
             //make a vector with origin in the center of the sprite

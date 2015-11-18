@@ -18,7 +18,7 @@ namespace MageTwinstick
         //Properteis
         //Auto properties for the values
         /// <summary>
-        /// 2D Vector for the object starting position
+        /// 2D Vector for the GameObject  position
         /// </summary>
         public Vector2D Position { get; set; }
         /// <summary>
@@ -38,7 +38,7 @@ namespace MageTwinstick
         /// </summary>
         /// <param name="imagePath">Image path for the sprite</param>
         /// <param name="startPos">The starting position of the GameObject</param>
-        /// <param name="display"></param>
+        /// <param name="display">Rectangle for the diplay</param>
         /// <param name="animationSpeed">Animation speed for animated objects</param>
         public GameObject(string imagePath, Vector2D startPos, Rectangle display, float animationSpeed)
         {
