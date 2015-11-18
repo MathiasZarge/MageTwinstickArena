@@ -4,17 +4,20 @@ namespace MageTwinstick
 {
     abstract class Unit : MovingObject
     {
+        /// <summary>
+        /// double for the units health
+        /// </summary>
         public double Health { get; set; }
 
      /// <summary>
      /// Unit Constructor
      /// </summary>
-     /// <param name="speed"></param>
-     /// <param name="health"></param>
-     /// <param name="imagePath"></param>
-     /// <param name="startPos"></param>
-     /// <param name="display"></param>
-     /// <param name="animationSpeed"></param>
+     /// <param name="speed">The units movement speed</param>
+     /// <param name="health">The units starting health</param>
+     /// <param name="imagePath">Image path for the sprite</param>
+     /// <param name="startPos">The Units starting position</param>
+     /// <param name="display">The display rectangle</param>
+     /// <param name="animationSpeed">The speed of the animation</param>
         public Unit(float speed,int health, string imagePath, Vector2D startPos, Rectangle display, float animationSpeed)
             : base(speed, imagePath, startPos, display, animationSpeed)
         {

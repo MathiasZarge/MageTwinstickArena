@@ -8,8 +8,14 @@ namespace MageTwinstick
     class Player : Unit
     {
         //Properties
-        public double Mana { get; set; } // Auto property for mana
-        public float Score { get; set; } = 0; // Auto property for score 
+        /// <summary>
+        /// Auto property for mana
+        /// </summary>
+        public double Mana { get; set; }
+        /// <summary>
+        /// Auto property for score
+        /// </summary>
+        public float Score { get; set; } = 0;
         /// <summary>
         /// Player constructor
         /// </summary>
