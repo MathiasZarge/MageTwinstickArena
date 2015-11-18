@@ -9,7 +9,7 @@ namespace MageTwinstick
 {
     static class Mouse
     {
-        //fields
+        //fields to contain the mouse positino
         public static float X { get; set; }
         public static float Y { get; set; }
     }

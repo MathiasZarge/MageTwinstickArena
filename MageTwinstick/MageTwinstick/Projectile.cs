@@ -7,7 +7,7 @@ namespace MageTwinstick
         /// <summary>
         /// Fields.
         /// </summary>
-        private Vector2D velocity; // Filed to store the velocity.
+        private Vector2D velocity; //<! Filed to store the velocity.
 
         public Projectile(float speed, string imagePath, Vector2D startPos, Rectangle display, float animationSpeed) : base(speed, imagePath, startPos, display, animationSpeed)
         {
