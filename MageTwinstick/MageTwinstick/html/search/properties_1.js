@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['position',['Position',['../class_mage_twinstick_1_1_game_object.html#a74cf54e9808f3a9f93fa5c837076a7f0',1,'MageTwinstick::GameObject']]]
+  ['health',['Health',['../class_mage_twinstick_1_1_unit.html#a5c06094e798c41a5d484f6ee00757667',1,'MageTwinstick::Unit']]]
 ];

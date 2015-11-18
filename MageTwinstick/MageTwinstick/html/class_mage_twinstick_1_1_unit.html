@@ -143,12 +143,12 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
 Properties</h2></td></tr>
-<tr class="memitem:a5c06094e798c41a5d484f6ee00757667"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5c06094e798c41a5d484f6ee00757667"></a>
-double&#160;</td><td class="memItemRight" valign="bottom"><b>Health</b><code> [get, set]</code></td></tr>
+<tr class="memitem:a5c06094e798c41a5d484f6ee00757667"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mage_twinstick_1_1_unit.html#a5c06094e798c41a5d484f6ee00757667">Health</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:a5c06094e798c41a5d484f6ee00757667"><td class="mdescLeft">&#160;</td><td class="mdescRight">double for the units health  <a href="#a5c06094e798c41a5d484f6ee00757667">More...</a><br /></td></tr>
 <tr class="separator:a5c06094e798c41a5d484f6ee00757667"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header properties_class_mage_twinstick_1_1_game_object"><td colspan="2" onclick="javascript:toggleInherit('properties_class_mage_twinstick_1_1_game_object')"><img src="closed.png" alt="-"/>&#160;Properties inherited from <a class="el" href="class_mage_twinstick_1_1_game_object.html">MageTwinstick.GameObject</a></td></tr>
 <tr class="memitem:a74cf54e9808f3a9f93fa5c837076a7f0 inherit properties_class_mage_twinstick_1_1_game_object"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_mage_twinstick_1_1_vector2_d.html">Vector2D</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mage_twinstick_1_1_game_object.html#a74cf54e9808f3a9f93fa5c837076a7f0">Position</a><code> [get, set]</code></td></tr>
-<tr class="memdesc:a74cf54e9808f3a9f93fa5c837076a7f0 inherit properties_class_mage_twinstick_1_1_game_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">2D Vector for the object starting position  <a href="#a74cf54e9808f3a9f93fa5c837076a7f0">More...</a><br /></td></tr>
+<tr class="memdesc:a74cf54e9808f3a9f93fa5c837076a7f0 inherit properties_class_mage_twinstick_1_1_game_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">2D Vector for the <a class="el" href="class_mage_twinstick_1_1_game_object.html">GameObject</a> position  <a href="#a74cf54e9808f3a9f93fa5c837076a7f0">More...</a><br /></td></tr>
 <tr class="separator:a74cf54e9808f3a9f93fa5c837076a7f0 inherit properties_class_mage_twinstick_1_1_game_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a66a2645b4fda01d5dd2f5e311c338b90 inherit properties_class_mage_twinstick_1_1_game_object"><td class="memItemLeft" align="right" valign="top">RectangleF&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mage_twinstick_1_1_game_object.html#a66a2645b4fda01d5dd2f5e311c338b90">CollisionBox</a><code> [get]</code></td></tr>
 <tr class="memdesc:a66a2645b4fda01d5dd2f5e311c338b90 inherit properties_class_mage_twinstick_1_1_game_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rectanglge for the GameObjects collider  <a href="#a66a2645b4fda01d5dd2f5e311c338b90">More...</a><br /></td></tr>
@@ -245,12 +245,12 @@ float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cla
 <p><a class="el" href="class_mage_twinstick_1_1_unit.html">Unit</a> Constructor </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">speed</td><td></td></tr>
-    <tr><td class="paramname">health</td><td></td></tr>
-    <tr><td class="paramname">imagePath</td><td></td></tr>
-    <tr><td class="paramname">startPos</td><td></td></tr>
-    <tr><td class="paramname">display</td><td></td></tr>
-    <tr><td class="paramname">animationSpeed</td><td></td></tr>
+    <tr><td class="paramname">speed</td><td>The units movement speed</td></tr>
+    <tr><td class="paramname">health</td><td>The units starting health</td></tr>
+    <tr><td class="paramname">imagePath</td><td>Image path for the sprite</td></tr>
+    <tr><td class="paramname">startPos</td><td>The Units starting position</td></tr>
+    <tr><td class="paramname">display</td><td>The display rectangle</td></tr>
+    <tr><td class="paramname">animationSpeed</td><td>The speed of the animation</td></tr>
   </table>
   </dd>
 </dl>
@@ -282,6 +282,29 @@ float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cla
 <p>Abstract function Attack </p>
 
 <p>Implemented in <a class="el" href="class_mage_twinstick_1_1_player.html#a418c80bddb416cd2cdd180ab21831f57">MageTwinstick.Player</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Property Documentation</h2>
+<a class="anchor" id="a5c06094e798c41a5d484f6ee00757667"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double MageTwinstick.Unit.Health</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>double for the units health </p>
 
 </div>
 </div>
