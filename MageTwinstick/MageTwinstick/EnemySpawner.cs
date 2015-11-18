@@ -12,7 +12,7 @@ namespace MageTwinstick
     {
 
         private float time = 0;
-        private int spawnCounter = 1;
+        private int spawnCounter = 3;
         List<GameObject> enemy = new List<GameObject>();
         private Rectangle display;
         private Player player;

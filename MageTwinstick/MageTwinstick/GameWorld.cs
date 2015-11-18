@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
-using System.Drawing.Drawing2D;
+using System.Windows.Forms;
 
 namespace MageTwinstick
 {
@@ -14,13 +14,13 @@ namespace MageTwinstick
         private BufferedGraphics backBuffer;
         private Rectangle display;
         private EnemySpawner es;
-        private bool isRunning = true;
-
+        
         //Properties
         //Auto properties for the given values
         public static List<GameObject> Objects { get; set; } = new List<GameObject>();
         public static List<GameObject> ObjectsToRemove { get; set; } = new List<GameObject>();
         public static List<GameObject> ObjectsToAdd { get; set; } = new List<GameObject>();
+        public bool IsRunning { get; set; } = true;
 
         //Constructer
         public GameWorld(Graphics dc, Rectangle display) //takes graphics and display as arguments
@@ -28,6 +28,14 @@ namespace MageTwinstick
             this.display = display;
             this.backBuffer = BufferedGraphicsManager.Current.Allocate(dc, display);
             this.dc = backBuffer.Graphics;
+        }
+        
+        //Static Methods
+        public static void ResetStatics()
+        {
+            Objects.Clear();
+            ObjectsToRemove.Clear();
+            ObjectsToAdd.Clear();
         }
 
         //Methods
@@ -70,10 +78,13 @@ namespace MageTwinstick
 
             dc.Clear(Color.White);
 
-            es.Update(currentFps);
-            Update(); // Update all gameobjects
-            UpdateAnimation(); // update all animations
-            Draw(); // draw all objects
+            if (IsRunning)
+            {
+                es.Update(currentFps);
+                Update(); // Update all gameobjects
+                UpdateAnimation(); // update all animations
+                Draw(); // draw all objects
+            }
 
             endTime = DateTime.Now;
 
@@ -109,6 +120,14 @@ namespace MageTwinstick
             foreach (GameObject go in Objects)
             {
                 go.Update(currentFps);
+
+                if (go is Player)
+                {
+                    if ((go as Player).Health <= 0)
+                    {
+                        IsRunning = false;
+                    }
+                }
             }
         }
 
@@ -119,6 +138,12 @@ namespace MageTwinstick
             {
                 go.UpdateAnimation(currentFps);
             }
+        }
+
+        public void Dispose()
+        {
+            backBuffer.Dispose();
+            ResetStatics();
         }
     }
 }
