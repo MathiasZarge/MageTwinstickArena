@@ -3,6 +3,9 @@ using System.Drawing;
 
 namespace MageTwinstick
 {
+    /// <summary>
+    /// Superclass for anything that exsist in the GameWorld
+    /// </summary>
     abstract class GameObject
     {
         //fields

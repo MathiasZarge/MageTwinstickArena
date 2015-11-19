@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['mana',['Mana',['../class_mage_twinstick_1_1_player.html#a18f4e83174054293e8f60af4d66d2925',1,'MageTwinstick::Player']]]
+  ['mana',['Mana',['../class_mage_twinstick_1_1_player.html#a0c30b0fbc931346ba557a49ea8e26b1d',1,'MageTwinstick::Player']]]
 ];

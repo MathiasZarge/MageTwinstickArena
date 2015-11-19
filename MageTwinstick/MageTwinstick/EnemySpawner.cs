@@ -8,6 +8,9 @@ using System.Threading.Tasks;
 
 namespace MageTwinstick
 {
+    /// <summary>
+    /// Creates Enemy objects in the GameWorld
+    /// </summary>
     class EnemySpawner
     {
 

@@ -3,6 +3,9 @@ using System.Drawing;
 
 namespace MageTwinstick
 {
+    /// <summary>
+    /// Fights the player by running at him
+    /// </summary>
     internal class Enemy : Unit
     {
         private float attackTimer; //!< Used to calculate when an attack is ready

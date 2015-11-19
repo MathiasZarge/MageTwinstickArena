@@ -2,6 +2,9 @@
 
 namespace MageTwinstick
 {
+    /// <summary>
+    /// Superclass for anything that moves, attacks and dies
+    /// </summary>
     abstract class Unit : MovingObject
     {
         /// <summary>

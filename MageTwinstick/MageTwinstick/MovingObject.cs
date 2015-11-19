@@ -2,7 +2,9 @@
 
 namespace MageTwinstick
 {
-
+    /// <summary>
+    /// superclass for any object that moves
+    /// </summary>
     abstract class MovingObject : GameObject
     {
         protected float speed;//<! field for the speed of the gamobject 
