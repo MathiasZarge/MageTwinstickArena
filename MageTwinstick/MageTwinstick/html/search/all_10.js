@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['y',['Y',['../class_mage_twinstick_1_1_vector2_d.html#a0ae54e599156e7c295515bfc80834bfd',1,'MageTwinstick::Vector2D']]]
+  ['x',['X',['../class_mage_twinstick_1_1_vector2_d.html#ac750d49285ebcd4e4bb81295f91ab600',1,'MageTwinstick::Vector2D']]]
 ];

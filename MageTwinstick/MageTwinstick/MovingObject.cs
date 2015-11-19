@@ -7,8 +7,9 @@ namespace MageTwinstick
     /// </summary>
     abstract class MovingObject : GameObject
     {
-        protected float speed;//<! field for the speed of the gamobject 
-        protected double angle;//<! the angle of rotation
+        //Fields
+        protected float speed;//<! the speed of the gamobject 
+        protected double angle;//<!the angle of rotation
 
         /// <summary>
         /// constructer for movingobject

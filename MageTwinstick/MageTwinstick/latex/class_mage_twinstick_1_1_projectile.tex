@@ -1,22 +1,62 @@
 \hypertarget{class_mage_twinstick_1_1_projectile}{}\section{Mage\+Twinstick.\+Projectile Class Reference}
 \label{class_mage_twinstick_1_1_projectile}\index{Mage\+Twinstick.\+Projectile@{Mage\+Twinstick.\+Projectile}}
+
+
+\hyperlink{class_mage_twinstick_1_1_projectile}{Projectile} used in the Players Attack method  
+
+
 Inheritance diagram for Mage\+Twinstick.\+Projectile\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[height=4.000000cm]{class_mage_twinstick_1_1_projectile}
+\includegraphics[height=3.000000cm]{class_mage_twinstick_1_1_projectile}
 \end{center}
 \end{figure}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{class_mage_twinstick_1_1_projectile_a2e18fb2d662c973c867069a248b5a5ed}{}{\bfseries Projectile} (float speed, string image\+Path, \hyperlink{class_mage_twinstick_1_1_vector2_d}{Vector2\+D} start\+Pos, Rectangle \hyperlink{class_mage_twinstick_1_1_game_object_a5807df7f837dc87c8955a008d0b27b50}{display}, float \hyperlink{class_mage_twinstick_1_1_game_object_a5d21c31402c27c5a19f2a62d98720456}{animation\+Speed})\label{class_mage_twinstick_1_1_projectile_a2e18fb2d662c973c867069a248b5a5ed}
-
-\item 
+\hyperlink{class_mage_twinstick_1_1_projectile_a2e18fb2d662c973c867069a248b5a5ed}{Projectile} (float speed, string image\+Path, \hyperlink{class_mage_twinstick_1_1_vector2_d}{Vector2\+D} start\+Pos, Rectangle \hyperlink{class_mage_twinstick_1_1_game_object_a5807df7f837dc87c8955a008d0b27b50}{display}, float \hyperlink{class_mage_twinstick_1_1_game_object_a5d21c31402c27c5a19f2a62d98720456}{animation\+Speed})
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_mage_twinstick_1_1_projectile}{Projectile} constructor \end{DoxyCompactList}\item 
 override void \hyperlink{class_mage_twinstick_1_1_projectile_a9208eff25bc92289191d5470bbc7015a}{Update} (float fps)
-\begin{DoxyCompactList}\small\item\em updates the information in the \hyperlink{class_mage_twinstick_1_1_game_object}{Game\+Object} \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Override for the update function, runs every Update \end{DoxyCompactList}\item 
 override void \hyperlink{class_mage_twinstick_1_1_projectile_ad646d013997eceb12a0ac2f5df56d3bb}{On\+Collision} (\hyperlink{class_mage_twinstick_1_1_game_object}{Game\+Object} other)
-\begin{DoxyCompactList}\small\item\em Abstract method for functionality when colliding with a specific \hyperlink{class_mage_twinstick_1_1_game_object}{Game\+Object} \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em On Collision with another \hyperlink{class_mage_twinstick_1_1_game_object}{Game\+Object} \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\hyperlink{class_mage_twinstick_1_1_projectile}{Projectile} used in the Players Attack method 
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_mage_twinstick_1_1_projectile_a2e18fb2d662c973c867069a248b5a5ed}{}\index{Mage\+Twinstick\+::\+Projectile@{Mage\+Twinstick\+::\+Projectile}!Projectile@{Projectile}}
+\index{Projectile@{Projectile}!Mage\+Twinstick\+::\+Projectile@{Mage\+Twinstick\+::\+Projectile}}
+\subsubsection[{Projectile(float speed, string image\+Path, Vector2\+D start\+Pos, Rectangle display, float animation\+Speed)}]{\setlength{\rightskip}{0pt plus 5cm}Mage\+Twinstick.\+Projectile.\+Projectile (
+\begin{DoxyParamCaption}
+\item[{float}]{speed, }
+\item[{string}]{image\+Path, }
+\item[{{\bf Vector2\+D}}]{start\+Pos, }
+\item[{Rectangle}]{display, }
+\item[{float}]{animation\+Speed}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_mage_twinstick_1_1_projectile_a2e18fb2d662c973c867069a248b5a5ed}
+
+
+\hyperlink{class_mage_twinstick_1_1_projectile}{Projectile} constructor 
+
+
+\begin{DoxyParams}{Parameters}
+{\em speed} & The Objects speed\\
+\hline
+{\em image\+Path} & The Path For the image sprite\\
+\hline
+{\em start\+Pos} & Starting Position\\
+\hline
+{\em display} & Display Rectangle\\
+\hline
+{\em animation\+Speed} & Speed of the animation\\
+\hline
+\end{DoxyParams}
 
 
 \subsection{Member Function Documentation}
@@ -29,11 +69,11 @@ override void \hyperlink{class_mage_twinstick_1_1_projectile_ad646d013997eceb12a
 )\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_mage_twinstick_1_1_projectile_ad646d013997eceb12a0ac2f5df56d3bb}
 
 
-Abstract method for functionality when colliding with a specific \hyperlink{class_mage_twinstick_1_1_game_object}{Game\+Object} 
+On Collision with another \hyperlink{class_mage_twinstick_1_1_game_object}{Game\+Object} 
 
 
 \begin{DoxyParams}{Parameters}
-{\em other} & The other \hyperlink{class_mage_twinstick_1_1_game_object}{Game\+Object}\\
+{\em other} & the other \hyperlink{class_mage_twinstick_1_1_game_object}{Game\+Object}\\
 \hline
 \end{DoxyParams}
 
@@ -49,11 +89,11 @@ Implements \hyperlink{class_mage_twinstick_1_1_game_object_a60f894a5ff911af7bfe3
 )\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_mage_twinstick_1_1_projectile_a9208eff25bc92289191d5470bbc7015a}
 
 
-updates the information in the \hyperlink{class_mage_twinstick_1_1_game_object}{Game\+Object} 
+Override for the update function, runs every Update 
 
 
 \begin{DoxyParams}{Parameters}
-{\em fps} & Fps used to update based on time\\
+{\em fps} & current frames per second\\
 \hline
 \end{DoxyParams}
 

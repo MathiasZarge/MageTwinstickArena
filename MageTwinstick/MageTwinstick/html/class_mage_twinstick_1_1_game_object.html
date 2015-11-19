@@ -96,50 +96,52 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">MageTwinstick.GameObject Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Superclass for anything that exsist in the GameWorld  
+ <a href="class_mage_twinstick_1_1_game_object.html#details">More...</a></p>
 <div class="dynheader">
 Inheritance diagram for MageTwinstick.GameObject:</div>
 <div class="dyncontent">
  <div class="center">
   <img src="class_mage_twinstick_1_1_game_object.png" usemap="#MageTwinstick.GameObject_map" alt=""/>
   <map id="MageTwinstick.GameObject_map" name="MageTwinstick.GameObject_map">
-<area href="class_mage_twinstick_1_1_arena.html" alt="MageTwinstick.Arena" shape="rect" coords="0,56,190,80"/>
-<area href="class_mage_twinstick_1_1_moving_object.html" alt="MageTwinstick.MovingObject" shape="rect" coords="200,56,390,80"/>
-<area href="class_mage_twinstick_1_1_projectile.html" alt="MageTwinstick.Projectile" shape="rect" coords="100,112,290,136"/>
-<area href="class_mage_twinstick_1_1_unit.html" alt="MageTwinstick.Unit" shape="rect" coords="300,112,490,136"/>
-<area href="class_mage_twinstick_1_1_enemy_projectile.html" alt="MageTwinstick.EnemyProjectile" shape="rect" coords="100,168,290,192"/>
-<area href="class_mage_twinstick_1_1_player.html" alt="MageTwinstick.Player" shape="rect" coords="300,168,490,192"/>
+<area href="class_mage_twinstick_1_1_arena.html" title="Background " alt="MageTwinstick.Arena" shape="rect" coords="0,56,178,80"/>
+<area href="class_mage_twinstick_1_1_moving_object.html" title="superclass for any object that moves " alt="MageTwinstick.MovingObject" shape="rect" coords="188,56,366,80"/>
+<area href="class_mage_twinstick_1_1_projectile.html" title="Projectile used in the Players Attack method " alt="MageTwinstick.Projectile" shape="rect" coords="94,112,272,136"/>
+<area href="class_mage_twinstick_1_1_unit.html" title="Superclass for anything that moves, attacks and dies " alt="MageTwinstick.Unit" shape="rect" coords="282,112,460,136"/>
+<area href="class_mage_twinstick_1_1_player.html" title="the unit the player controls " alt="MageTwinstick.Player" shape="rect" coords="282,168,460,192"/>
 </map>
  </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a70fd6f506e37d368c4b5dc324286e0ec"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mage_twinstick_1_1_game_object.html#a70fd6f506e37d368c4b5dc324286e0ec">GameObject</a> (string imagePath, <a class="el" href="class_mage_twinstick_1_1_vector2_d.html">Vector2D</a> startPos, Rectangle <a class="el" href="class_mage_twinstick_1_1_game_object.html#a5807df7f837dc87c8955a008d0b27b50">display</a>, float <a class="el" href="class_mage_twinstick_1_1_game_object.html#a5d21c31402c27c5a19f2a62d98720456">animationSpeed</a>)</td></tr>
-<tr class="memdesc:a70fd6f506e37d368c4b5dc324286e0ec"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_mage_twinstick_1_1_game_object.html">GameObject</a> Constructor  <a href="#a70fd6f506e37d368c4b5dc324286e0ec">More...</a><br /></td></tr>
+<tr class="memdesc:a70fd6f506e37d368c4b5dc324286e0ec"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_mage_twinstick_1_1_game_object.html" title="Superclass for anything that exsist in the GameWorld ">GameObject</a> Constructor  <a href="#a70fd6f506e37d368c4b5dc324286e0ec">More...</a><br /></td></tr>
 <tr class="separator:a70fd6f506e37d368c4b5dc324286e0ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a11628f4d9b508e2d976ca25f716b74f5"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mage_twinstick_1_1_game_object.html#a11628f4d9b508e2d976ca25f716b74f5">Draw</a> (Graphics dc)</td></tr>
 <tr class="memdesc:a11628f4d9b508e2d976ca25f716b74f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">draws the graphics in the GameWorld  <a href="#a11628f4d9b508e2d976ca25f716b74f5">More...</a><br /></td></tr>
 <tr class="separator:a11628f4d9b508e2d976ca25f716b74f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3de8248d06d234f8335525bbb28ccacc"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mage_twinstick_1_1_game_object.html#a3de8248d06d234f8335525bbb28ccacc">Update</a> (float fps)</td></tr>
-<tr class="memdesc:a3de8248d06d234f8335525bbb28ccacc"><td class="mdescLeft">&#160;</td><td class="mdescRight">updates the information in the <a class="el" href="class_mage_twinstick_1_1_game_object.html">GameObject</a>  <a href="#a3de8248d06d234f8335525bbb28ccacc">More...</a><br /></td></tr>
+<tr class="memdesc:a3de8248d06d234f8335525bbb28ccacc"><td class="mdescLeft">&#160;</td><td class="mdescRight">updates the information in the <a class="el" href="class_mage_twinstick_1_1_game_object.html" title="Superclass for anything that exsist in the GameWorld ">GameObject</a>  <a href="#a3de8248d06d234f8335525bbb28ccacc">More...</a><br /></td></tr>
 <tr class="separator:a3de8248d06d234f8335525bbb28ccacc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a35d6d9af3335b978c618ab73da1215a0"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mage_twinstick_1_1_game_object.html#a35d6d9af3335b978c618ab73da1215a0">UpdateAnimation</a> (float fps)</td></tr>
-<tr class="memdesc:a35d6d9af3335b978c618ab73da1215a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Animates the sprite on the <a class="el" href="class_mage_twinstick_1_1_game_object.html">GameObject</a>  <a href="#a35d6d9af3335b978c618ab73da1215a0">More...</a><br /></td></tr>
+<tr class="memdesc:a35d6d9af3335b978c618ab73da1215a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Animates the sprite on the <a class="el" href="class_mage_twinstick_1_1_game_object.html" title="Superclass for anything that exsist in the GameWorld ">GameObject</a>  <a href="#a35d6d9af3335b978c618ab73da1215a0">More...</a><br /></td></tr>
 <tr class="separator:a35d6d9af3335b978c618ab73da1215a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5ed64726e236792a162c2899b7446d66"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mage_twinstick_1_1_game_object.html#a5ed64726e236792a162c2899b7446d66">CheckCollision</a> ()</td></tr>
 <tr class="memdesc:a5ed64726e236792a162c2899b7446d66"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks for collision with other GameObjects  <a href="#a5ed64726e236792a162c2899b7446d66">More...</a><br /></td></tr>
 <tr class="separator:a5ed64726e236792a162c2899b7446d66"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a024097f67b0a8b2f38451e8df05b6b1d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mage_twinstick_1_1_game_object.html#a024097f67b0a8b2f38451e8df05b6b1d">IsCollidingWith</a> (<a class="el" href="class_mage_twinstick_1_1_game_object.html">GameObject</a> other)</td></tr>
-<tr class="memdesc:a024097f67b0a8b2f38451e8df05b6b1d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks for collision with a specific <a class="el" href="class_mage_twinstick_1_1_game_object.html">GameObject</a>  <a href="#a024097f67b0a8b2f38451e8df05b6b1d">More...</a><br /></td></tr>
+<tr class="memdesc:a024097f67b0a8b2f38451e8df05b6b1d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks for collision with a specific <a class="el" href="class_mage_twinstick_1_1_game_object.html" title="Superclass for anything that exsist in the GameWorld ">GameObject</a>  <a href="#a024097f67b0a8b2f38451e8df05b6b1d">More...</a><br /></td></tr>
 <tr class="separator:a024097f67b0a8b2f38451e8df05b6b1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a60f894a5ff911af7bfe3e4bd8abf253f"><td class="memItemLeft" align="right" valign="top">abstract void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mage_twinstick_1_1_game_object.html#a60f894a5ff911af7bfe3e4bd8abf253f">OnCollision</a> (<a class="el" href="class_mage_twinstick_1_1_game_object.html">GameObject</a> other)</td></tr>
-<tr class="memdesc:a60f894a5ff911af7bfe3e4bd8abf253f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Abstract method for functionality when colliding with a specific <a class="el" href="class_mage_twinstick_1_1_game_object.html">GameObject</a>  <a href="#a60f894a5ff911af7bfe3e4bd8abf253f">More...</a><br /></td></tr>
+<tr class="memdesc:a60f894a5ff911af7bfe3e4bd8abf253f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Abstract method for functionality when colliding with a specific <a class="el" href="class_mage_twinstick_1_1_game_object.html" title="Superclass for anything that exsist in the GameWorld ">GameObject</a>  <a href="#a60f894a5ff911af7bfe3e4bd8abf253f">More...</a><br /></td></tr>
 <tr class="separator:a60f894a5ff911af7bfe3e4bd8abf253f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
 <tr class="memitem:a0d553d62b8d1e865b6f106c6b3b110fe"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0d553d62b8d1e865b6f106c6b3b110fe"></a>
 Image&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mage_twinstick_1_1_game_object.html#a0d553d62b8d1e865b6f106c6b3b110fe">sprite</a></td></tr>
-<tr class="memdesc:a0d553d62b8d1e865b6f106c6b3b110fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Image sprite for the <a class="el" href="class_mage_twinstick_1_1_game_object.html">GameObject</a>. <br /></td></tr>
+<tr class="memdesc:a0d553d62b8d1e865b6f106c6b3b110fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Image sprite for the <a class="el" href="class_mage_twinstick_1_1_game_object.html" title="Superclass for anything that exsist in the GameWorld ">GameObject</a>. <br /></td></tr>
 <tr class="separator:a0d553d62b8d1e865b6f106c6b3b110fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5807df7f837dc87c8955a008d0b27b50"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5807df7f837dc87c8955a008d0b27b50"></a>
 Rectangle&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mage_twinstick_1_1_game_object.html#a5807df7f837dc87c8955a008d0b27b50">display</a></td></tr>
@@ -161,13 +163,15 @@ float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cla
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
 Properties</h2></td></tr>
 <tr class="memitem:a74cf54e9808f3a9f93fa5c837076a7f0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_mage_twinstick_1_1_vector2_d.html">Vector2D</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mage_twinstick_1_1_game_object.html#a74cf54e9808f3a9f93fa5c837076a7f0">Position</a><code> [get, set]</code></td></tr>
-<tr class="memdesc:a74cf54e9808f3a9f93fa5c837076a7f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">2D Vector for the <a class="el" href="class_mage_twinstick_1_1_game_object.html">GameObject</a> position  <a href="#a74cf54e9808f3a9f93fa5c837076a7f0">More...</a><br /></td></tr>
+<tr class="memdesc:a74cf54e9808f3a9f93fa5c837076a7f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">2D Vector for the <a class="el" href="class_mage_twinstick_1_1_game_object.html" title="Superclass for anything that exsist in the GameWorld ">GameObject</a> position  <a href="#a74cf54e9808f3a9f93fa5c837076a7f0">More...</a><br /></td></tr>
 <tr class="separator:a74cf54e9808f3a9f93fa5c837076a7f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a66a2645b4fda01d5dd2f5e311c338b90"><td class="memItemLeft" align="right" valign="top">RectangleF&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mage_twinstick_1_1_game_object.html#a66a2645b4fda01d5dd2f5e311c338b90">CollisionBox</a><code> [get]</code></td></tr>
 <tr class="memdesc:a66a2645b4fda01d5dd2f5e311c338b90"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rectanglge for the GameObjects collider  <a href="#a66a2645b4fda01d5dd2f5e311c338b90">More...</a><br /></td></tr>
 <tr class="separator:a66a2645b4fda01d5dd2f5e311c338b90"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Superclass for anything that exsist in the GameWorld </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a70fd6f506e37d368c4b5dc324286e0ec"></a>
 <div class="memitem">
 <div class="memproto">
@@ -212,11 +216,11 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p><a class="el" href="class_mage_twinstick_1_1_game_object.html">GameObject</a> Constructor </p>
+<p><a class="el" href="class_mage_twinstick_1_1_game_object.html" title="Superclass for anything that exsist in the GameWorld ">GameObject</a> Constructor </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">imagePath</td><td>Image path for the sprite</td></tr>
-    <tr><td class="paramname">startPos</td><td>The starting position of the <a class="el" href="class_mage_twinstick_1_1_game_object.html">GameObject</a></td></tr>
+    <tr><td class="paramname">startPos</td><td>The starting position of the <a class="el" href="class_mage_twinstick_1_1_game_object.html" title="Superclass for anything that exsist in the GameWorld ">GameObject</a></td></tr>
     <tr><td class="paramname">display</td><td>Rectangle for the diplay</td></tr>
     <tr><td class="paramname">animationSpeed</td><td>Animation speed for animated objects</td></tr>
   </table>
@@ -307,10 +311,10 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Checks for collision with a specific <a class="el" href="class_mage_twinstick_1_1_game_object.html">GameObject</a> </p>
+<p>Checks for collision with a specific <a class="el" href="class_mage_twinstick_1_1_game_object.html" title="Superclass for anything that exsist in the GameWorld ">GameObject</a> </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">other</td><td>The other <a class="el" href="class_mage_twinstick_1_1_game_object.html">GameObject</a></td></tr>
+    <tr><td class="paramname">other</td><td>The other <a class="el" href="class_mage_twinstick_1_1_game_object.html" title="Superclass for anything that exsist in the GameWorld ">GameObject</a></td></tr>
   </table>
   </dd>
 </dl>
@@ -340,10 +344,10 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Abstract method for functionality when colliding with a specific <a class="el" href="class_mage_twinstick_1_1_game_object.html">GameObject</a> </p>
+<p>Abstract method for functionality when colliding with a specific <a class="el" href="class_mage_twinstick_1_1_game_object.html" title="Superclass for anything that exsist in the GameWorld ">GameObject</a> </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">other</td><td>The other <a class="el" href="class_mage_twinstick_1_1_game_object.html">GameObject</a></td></tr>
+    <tr><td class="paramname">other</td><td>The other <a class="el" href="class_mage_twinstick_1_1_game_object.html" title="Superclass for anything that exsist in the GameWorld ">GameObject</a></td></tr>
   </table>
   </dd>
 </dl>
@@ -374,7 +378,7 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>updates the information in the <a class="el" href="class_mage_twinstick_1_1_game_object.html">GameObject</a> </p>
+<p>updates the information in the <a class="el" href="class_mage_twinstick_1_1_game_object.html" title="Superclass for anything that exsist in the GameWorld ">GameObject</a> </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">fps</td><td>Fps used to update based on time</td></tr>
@@ -408,7 +412,7 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Animates the sprite on the <a class="el" href="class_mage_twinstick_1_1_game_object.html">GameObject</a> </p>
+<p>Animates the sprite on the <a class="el" href="class_mage_twinstick_1_1_game_object.html" title="Superclass for anything that exsist in the GameWorld ">GameObject</a> </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">fps</td><td>Fps used to update based on time</td></tr>
@@ -459,7 +463,7 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>2D Vector for the <a class="el" href="class_mage_twinstick_1_1_game_object.html">GameObject</a> position </p>
+<p>2D Vector for the <a class="el" href="class_mage_twinstick_1_1_game_object.html" title="Superclass for anything that exsist in the GameWorld ">GameObject</a> position </p>
 
 </div>
 </div>

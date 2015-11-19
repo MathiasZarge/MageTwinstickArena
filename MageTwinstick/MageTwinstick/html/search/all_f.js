@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['x',['X',['../class_mage_twinstick_1_1_vector2_d.html#ac750d49285ebcd4e4bb81295f91ab600',1,'MageTwinstick::Vector2D']]]
+  ['vector2d',['Vector2D',['../class_mage_twinstick_1_1_vector2_d.html',1,'MageTwinstick']]],
+  ['vector2d',['Vector2D',['../class_mage_twinstick_1_1_vector2_d.html#a36be1b509d98d7ff48b7fff196a5bf23',1,'MageTwinstick::Vector2D']]]
 ];

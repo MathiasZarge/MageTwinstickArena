@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['rangedenemy',['RangedEnemy',['../class_mage_twinstick_1_1_ranged_enemy.html',1,'MageTwinstick']]]
+  ['unit',['Unit',['../class_mage_twinstick_1_1_unit.html',1,'MageTwinstick']]]
 ];

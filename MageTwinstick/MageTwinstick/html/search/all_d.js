@@ -1,7 +1,6 @@
 var searchData=
 [
-  ['unit',['Unit',['../class_mage_twinstick_1_1_unit.html',1,'MageTwinstick']]],
-  ['unit',['Unit',['../class_mage_twinstick_1_1_unit.html#a857d0f6e0f55b4c81e2a3bbf8711dd18',1,'MageTwinstick::Unit']]],
-  ['update',['Update',['../class_mage_twinstick_1_1_enemy_spawner.html#a4e22661d16cc2c9671eefe32fda8a42e',1,'MageTwinstick.EnemySpawner.Update()'],['../class_mage_twinstick_1_1_game_object.html#a3de8248d06d234f8335525bbb28ccacc',1,'MageTwinstick.GameObject.Update()'],['../class_mage_twinstick_1_1_player.html#a5324e0350784da0f66369ec5ef52516a',1,'MageTwinstick.Player.Update()'],['../class_mage_twinstick_1_1_projectile.html#a9208eff25bc92289191d5470bbc7015a',1,'MageTwinstick.Projectile.Update()']]],
-  ['updateanimation',['UpdateAnimation',['../class_mage_twinstick_1_1_game_object.html#a35d6d9af3335b978c618ab73da1215a0',1,'MageTwinstick::GameObject']]]
+  ['score',['Score',['../class_mage_twinstick_1_1_player.html#aa4b4878249b47797666fb77c82184533',1,'MageTwinstick::Player']]],
+  ['sprite',['sprite',['../class_mage_twinstick_1_1_game_object.html#a0d553d62b8d1e865b6f106c6b3b110fe',1,'MageTwinstick::GameObject']]],
+  ['subtract',['Subtract',['../class_mage_twinstick_1_1_vector2_d.html#a0675eb9cec3cd171d73797698e54f3ba',1,'MageTwinstick::Vector2D']]]
 ];
