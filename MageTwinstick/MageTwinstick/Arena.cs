@@ -2,6 +2,9 @@ using System.Drawing;
 
 namespace MageTwinstick
 {
+    /// <summary>
+    /// Background
+    /// </summary>
     class Arena : GameObject
     {
         /// <summary>

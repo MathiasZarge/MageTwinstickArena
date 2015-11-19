@@ -5,6 +5,9 @@ using System.Windows.Forms;
 
 namespace MageTwinstick
 {
+    /// <summary>
+    /// Stores information on all GameObjects, adds and removes Gameobjects
+    /// </summary>
     internal class GameWorld
     {
         //Fields
@@ -73,7 +76,7 @@ namespace MageTwinstick
         }
 
         /// <summary>
-        /// gameloop, runs wvery tick
+        /// gameloop, runs every tick
         /// </summary>
         public void GameLoop()
         {

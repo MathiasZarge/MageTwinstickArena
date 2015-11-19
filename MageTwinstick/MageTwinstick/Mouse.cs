@@ -7,6 +7,9 @@ using System.Threading.Tasks;
 
 namespace MageTwinstick
 {
+    /// <summary>
+    /// used to find the mouse position
+    /// </summary>
     static class Mouse
     {
         ////fields to contain the mouse position

@@ -5,6 +5,9 @@ using RandGame;
 
 namespace MageTwinstick
 {
+    /// <summary>
+    /// the unit the player controls
+    /// </summary>
     class Player : Unit
     {
         //Properties

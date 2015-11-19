@@ -3,6 +3,9 @@ using System.Drawing;
 
 namespace MageTwinstick
 {
+    /// <summary>
+    /// used for finding distances and directions of gamobjects
+    /// </summary>
     class Vector2D
     {
         /// <summary>
@@ -15,14 +18,22 @@ namespace MageTwinstick
         /// </summary>
         public float Y { get; set; }
 
-        //Creates a vector from two floats representing x and y.
+        /// <summary>
+        /// Creates a vector from two floats representing x and y.
+        /// </summary>
+        /// <param name="x">float for x</param>
+        /// <param name="y">float for y</param>
         public Vector2D(float x, float y)
         {
             X = x;
             Y = y;
         }
 
-        //Finds the difference between one position and another by creating a vector between them.
+        /// <summary>
+        /// Finds the difference between one position and another by creating a vector between them.
+        /// </summary>
+        /// <param name="vec">vector between two positions</param>
+        /// <returns></returns>
         public Vector2D Subtract(Vector2D vec)
         {
             // subtracts the two positions from each other
@@ -32,14 +43,19 @@ namespace MageTwinstick
             return newVec;
         }
 
-        //Calculates the lenght of a vector.
+        /// <summary>
+        /// Calculates the lenght of a vector.
+        /// </summary>
+        /// <returns></returns>
         private float Length()
         {
             // returns the length of the vector
             return (float)Math.Sqrt((this.X * this.X) + (this.Y * this.Y));
         }
 
-        //Normalizes the vector.
+        /// <summary>
+        /// Normalizes the vector.
+        /// </summary>
         public void Normalize()
         {
             // sets the length via the Lentgth() method
