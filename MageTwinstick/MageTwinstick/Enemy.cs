@@ -38,25 +38,37 @@ namespace MageTwinstick
         /// <param name="fps"></param>
         public override void Update(float fps)
         {
+            //subtracts the position of the player with the position of this
             Vector2D velocity = this.Position.Subtract(player.Position);
+            //makes unit vector
             velocity.Normalize();
 
+            //Moves in the direction of the unit vector
             Position.X += (1 / fps) * (velocity.X*speed);
             Position.Y += (1 / fps) * (velocity.Y*speed);
+            // if the attactimer is on cooldown, reduce it
             if (attackTimer > 0)
                 attackTimer -= 0.1f;
 
+            // if this objects health is 0 or beclow
             if (Health <= 0)
             {
+                // add to player score
                 player.Score += 100;
+                //remove this object
                 GameWorld.ObjectsToRemove.Add(this);
-                double r = random.Next(0, 101);
+                // Randomize
+                float r = random.Next(0, 101);
+                // if over 95
                 if (r > 95)
                 {
+                    // spawn health pickup
                     GameWorld.ObjectsToAdd.Add(new HealthRegen(@"Images\Powerups\healthPowerUp.png", new Vector2D(Position.X, Position.Y), display,1));
                 }
+                // if below 50
                 else if (r < 50)
                 {
+                    // spawn mana
                     GameWorld.ObjectsToAdd.Add(new ManaRegen(@"Images\Powerups\manaPowerUp.png", new Vector2D(Position.X, Position.Y), display, 1));
                 }
 
