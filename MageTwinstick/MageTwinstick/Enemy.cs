@@ -95,13 +95,18 @@ namespace MageTwinstick
         public override void Attack()
 
         {
+            // if the attacktimer is less than 0
             if (attackTimer < 0)
             {
+                // set the timer to 0
                 attackTimer = 0;
             }
+            // if the timer is 0
             if (attackTimer == 0)
             {
+                // damage the player
                 player.Health -= 10;
+                // put the atacktimer on cooldown
                 attackTimer = coolDown;
             }
         }
@@ -112,12 +117,16 @@ namespace MageTwinstick
         /// <param name="other">The other GameObject</param>
         public override void OnCollision(GameObject other)
         {
+            // if the other gameobject is of the class projectile
             if (other is Projectile)
             {
+                // Loose health form the projectile
                 Health -= 25;
             }
+            // if other is player
             if (other is Player)
             {
+                // call the attack function
                 Attack();
             }
         }
