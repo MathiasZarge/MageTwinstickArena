@@ -11,11 +11,13 @@ namespace MageTwinstick
         /// <summary>
         /// Auto property for mana
         /// </summary>
-        public double Mana { get; set; }
+        public float Mana { get; set; }
+
         /// <summary>
         /// Auto property for score
         /// </summary>
         public float Score { get; set; } = 0;
+
         /// <summary>
         /// Player constructor
         /// </summary>

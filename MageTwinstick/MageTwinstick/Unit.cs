@@ -5,9 +5,9 @@ namespace MageTwinstick
     abstract class Unit : MovingObject
     {
         /// <summary>
-        /// double for the units health
+        /// float for the units health
         /// </summary>
-        public double Health { get; set; }
+        public float Health { get; set; }
 
      /// <summary>
      /// Unit Constructor
