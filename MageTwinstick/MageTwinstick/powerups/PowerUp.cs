@@ -5,10 +5,6 @@ namespace MageTwinstick
 {
 
     //type of PowerUp
-    enum PowerUpType
-    {
-        Freeze, HealthRegen, ManaRegen
-    }
     class PowerUp : GameObject
     {
         //constructor for PowerUp

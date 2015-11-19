@@ -16,11 +16,11 @@ namespace MageTwinstick
         private int spawnCounter = 3;            /*!<Sets the spawnCounter to one to make sure an enemy spawns and to increase the number of enemies in latter rounds*/
         private Rectangle display;               /*!<Property that the enemy needs in its constructor*/
         private Player player;                   /*!<Property that the enemy needs in its constructor*/
-        protected float angle;                   /*!<Used to describe the angle in which the enemy will spawn*/
-        protected float posX;                    /*!<Used to calculate the position of the enemy on the X axis*/
-        protected float posY;                    /*!<Used to calculate the position of the enemy on the Y axis*/
+        private float angle;                   /*!<Used to describe the angle in which the enemy will spawn*/
+        private float posX;                    /*!<Used to calculate the position of the enemy on the X axis*/
+        private float posY;                    /*!<Used to calculate the position of the enemy on the Y axis*/
         private Random rnd = new Random();       /*!Used to create the random number to determin the position of the enemy spawning*/
-        List<bool> spawned = new List<bool> { false, false, false, false };     /*!<Bools used to check if the enemies have been spawned and make sure that only the appropriate number of enemies spawn each round*/
+        private List<bool> spawned = new List<bool> { false, false, false, false };     /*!<Bools used to check if the enemies have been spawned and make sure that only the appropriate number of enemies spawn each round*/
 
 
         public EnemySpawner(Rectangle display, Player player)

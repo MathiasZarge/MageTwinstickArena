@@ -5,8 +5,8 @@ namespace MageTwinstick
 {
     internal class Enemy : Unit
     {
-        public float attackTimer; //!< Used to calculate when an attack is ready
-        public float coolDown; //!< Denotes the time between attacks   
+        private float attackTimer; //!< Used to calculate when an attack is ready
+        private float coolDown; //!< Denotes the time between attacks   
         private Player player; //!< Keeps track of the player
         private Random random = new Random(); //!< Random used to drop powerups
 
